@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public bool canMove = true;
     public bool allMoved = true;
 
-    public List<Floor> floors;
+    public Floor[] floors;
     public GameObject gameOverScreen;
     public Slider fearLevelBar;
 
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
        if(isDead)
        {
+            Debug.Log("You are dead");
             GameOver();
        }
 
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
                 PriestManager.instance.Spawn();
             }
             UpdateFreakOMeter();
+            Debug.Log("Increased Freak O Meter");
         }
     }
 
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateFreakOMeter();
+        Debug.Log("Decreased Freak O Meter");
     }
 
     public void UpdateFreakOMeter()
@@ -103,6 +106,7 @@ public class GameManager : MonoBehaviour
 
     public void CompleteAMission(int floorId)
     {
+        Debug.Log("Someone just completed a mission");
         foreach(Floor floor in floors)
         {
             if(floor.floorId == floorId)

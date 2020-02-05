@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1198375575500827996}
   - component: {fileID: 4066774317052469233}
   - component: {fileID: 5675619522298404011}
+  - component: {fileID: 763075356}
   m_Layer: 11
   m_Name: Mother
   m_TagString: NPC
@@ -60,8 +61,8 @@ MonoBehaviour:
   isWaitingInFear: 0
   isMissionComplete: 0
   isMovingRight: 1
-  minXPosition: -5.65
-  maxXPosition: 21.38
+  minXPosition: -5.5
+  maxXPosition: 21
   itemThatJustMadeASound: {fileID: 0}
 --- !u!212 &2199581835187661014
 SpriteRenderer:
@@ -167,6 +168,33 @@ MonoBehaviour:
   mission: {fileID: 0}
   missionCompleted: 0
   hearts: {fileID: 0}
+  floorId: 0
+--- !u!61 &763075356
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782686768383965304}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.24819021, y: -1.3674443}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.6, y: 5.4}
+    newSize: {x: 2.09, y: 2.37}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3146288, y: 0.6076727}
+  m_EdgeRadius: 0
 --- !u!1 &4195961619798944765
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,7 +44,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fearLevel: 0
-  fearLevelMax: 0
+  fearLevelMax: 4
   gameEnded: 0
   gamePaused: 0
-  loserScreen: {fileID: 0}
+  isPossessing: 0
+  isHiding: 0
+  isDead: 0
+  allMissionsComplete: 0
+  canMove: 1
+  allMoved: 0
+  floors:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  fearLevelBar: {fileID: 0}

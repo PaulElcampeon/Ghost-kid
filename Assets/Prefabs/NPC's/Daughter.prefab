@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5498109078669012057}
   - component: {fileID: 5498109078669012056}
   - component: {fileID: 5498109078669012059}
+  - component: {fileID: 713585400}
   m_Layer: 11
   m_Name: Daughter
   m_TagString: NPC
@@ -58,9 +59,10 @@ MonoBehaviour:
   isInspectingSound: 0
   isWaiting: 0
   isWaitingInFear: 0
+  isMissionComplete: 0
   isMovingRight: 1
-  minXPosition: -5.65
-  maxXPosition: 21.38
+  minXPosition: -5.5
+  maxXPosition: 21
   itemThatJustMadeASound: {fileID: 0}
 --- !u!212 &5498109078669012062
 SpriteRenderer:
@@ -166,6 +168,33 @@ MonoBehaviour:
   mission: {fileID: 0}
   missionCompleted: 0
   hearts: {fileID: 0}
+  floorId: 1
+--- !u!61 &713585400
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498109078669012058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03217581, y: -0.981308}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 3.6}
+    newSize: {x: 2.09, y: 2.37}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6382434, y: 0.5434661}
+  m_EdgeRadius: 0
 --- !u!1 &5498109079482613067
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +336,7 @@ GameObject:
   - component: {fileID: 5498109079670921905}
   m_Layer: 11
   m_Name: GhostDetector
-  m_TagString: NPC
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
