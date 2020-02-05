@@ -18,14 +18,15 @@ public class GameManager : MonoBehaviour
     public bool allMoved = true;
 
     public Floor[] floors;
-    public GameObject gameOverScreen;
     public Slider fearLevelBar;
 
     public static GameManager instance;
 
+
     void Start()
     {
         instance = this;
+        ScreenFade.instance.FadeFromBlack();
     }
 
     void Update()
@@ -44,14 +45,17 @@ public class GameManager : MonoBehaviour
 
        if(isDead)
        {
+            isDead = false;
             Debug.Log("You are dead");
-            GameOver();
+            ScreenFade.instance.FadeToBlack();
+            StartCoroutine(LoadMainMenu());
        }
 
        if (allMissionsComplete)
         {
             Debug.Log("All Missions Completed");
-            GameOver();
+            ScreenFade.instance.FadeToBlack();
+            StartCoroutine(LoadMainMenu());
         }
     }
 
@@ -135,6 +139,12 @@ public class GameManager : MonoBehaviour
         {
             gameEnded = true;
         }
+    }
+
+    public IEnumerator LoadMainMenu()
+    {
+        yield return new WaitForSeconds(2f);
+        GameOver();
     }
 
     /*public void MoveAllCharactersToRightSideOfHouse()

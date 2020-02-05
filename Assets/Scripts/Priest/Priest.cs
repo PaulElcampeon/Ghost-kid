@@ -44,4 +44,15 @@ public class Priest : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            if (!GameManager.instance.isDead)
+            {
+                other.gameObject.GetComponent<Animator>().SetBool("isDead", true);
+            }
+        }
+    }
 }

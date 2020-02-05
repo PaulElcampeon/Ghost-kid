@@ -23,6 +23,7 @@ TagManager:
   - toys
   - ForItems
   - Priest
+  - PlayerInteraction
   layers:
   - Default
   - TransparentFX

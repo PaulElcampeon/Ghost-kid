@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9107673539213958611
+--- !u!1 &3815313513292485117
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9107673539213958610}
-  - component: {fileID: 123894286}
+  - component: {fileID: 3815313513292485118}
+  - component: {fileID: 3815313513292485119}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: ScreenFade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9107673539213958610
+--- !u!4 &3815313513292485118
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9107673539213958611}
+  m_GameObject: {fileID: 3815313513292485117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.898946, y: -3.3748689, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,33 +31,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &123894286
+--- !u!114 &3815313513292485119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9107673539213958611}
+  m_GameObject: {fileID: 3815313513292485117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c0fb7eb3232864297d46d1f42a7867, type: 3}
+  m_Script: {fileID: 11500000, guid: a987022c02c5a8d44953c75cfbb3488a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fearLevel: 0
-  fearLevelMax: 4
-  gameEnded: 0
-  gamePaused: 0
-  isPossessing: 0
-  isHiding: 0
-  isDead: 0
-  allMissionsComplete: 0
-  canMove: 1
-  allMoved: 0
-  floors:
-  - floorId: 0
-    isMissionComplete: 0
-  - floorId: 1
-    isMissionComplete: 0
-  - floorId: 2
-    isMissionComplete: 0
-  fearLevelBar: {fileID: 0}
+  fadeScreen: {fileID: 0}
+  fadeSpeed: 0.5

@@ -11,16 +11,34 @@ public class DoorOpeningRight : MonoBehaviour
     {
         if (other.gameObject.CompareTag("NPC") || other.gameObject.CompareTag("Priest"))
         {
-            if (!other.gameObject.GetComponent<NPC>().isMovingRight)
+            if (other.gameObject.CompareTag("NPC"))
             {
-                doorToClose.SetActive(false);
-                doorToOpen.SetActive(true);
+                if (!other.gameObject.GetComponent<NPC>().isMovingRight)
+                {
+                    doorToClose.SetActive(false);
+                    doorToOpen.SetActive(true);
+                }
+
+                if (other.gameObject.GetComponent<NPC>().isMovingRight)
+                {
+                    doorToClose.SetActive(true);
+                    doorToOpen.SetActive(false);
+                }
             }
 
-            if (other.gameObject.GetComponent<NPC>().isMovingRight)
+            if (other.gameObject.CompareTag("Priest"))
             {
-                doorToClose.SetActive(true);
-                doorToOpen.SetActive(false);
+                if (!other.gameObject.GetComponent<Priest>().isMovingRight)
+                {
+                    doorToClose.SetActive(false);
+                    doorToOpen.SetActive(true);
+                }
+
+                if (other.gameObject.GetComponent<Priest>().isMovingRight)
+                {
+                    doorToClose.SetActive(true);
+                    doorToOpen.SetActive(false);
+                }
             }
         }
     }
