@@ -12645,21 +12645,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6408610248466999221, guid: 9b43f85701ced844bbc97e1c80eadc61,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6408610248466999221, guid: 9b43f85701ced844bbc97e1c80eadc61,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -3.4751
-      objectReference: {fileID: 0}
-    - target: {fileID: 6408610248466999221, guid: 9b43f85701ced844bbc97e1c80eadc61,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 6.9501
-      objectReference: {fileID: 0}
     - target: {fileID: 6094386563110496610, guid: 9b43f85701ced844bbc97e1c80eadc61,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -12998,11 +12983,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fader
       objectReference: {fileID: 0}
-    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13195,11 +13175,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScreenFade
-      objectReference: {fileID: 0}
-    - target: {fileID: 3815313513292485117, guid: 5294b5fcbaa5f714ba17314a97f37f71,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3815313513292485118, guid: 5294b5fcbaa5f714ba17314a97f37f71,
         type: 3}
@@ -14643,46 +14618,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7892642473609857062, guid: 8408c4774717ec540a8305a88c494ba3,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 6581195798973183767, guid: 8408c4774717ec540a8305a88c494ba3,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -714431691
-      objectReference: {fileID: 0}
-    - target: {fileID: 6581195798973183767, guid: 8408c4774717ec540a8305a88c494ba3,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6581195798973183767, guid: 8408c4774717ec540a8305a88c494ba3,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3916269624405354820, guid: 8408c4774717ec540a8305a88c494ba3,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -714431691
-      objectReference: {fileID: 0}
-    - target: {fileID: 3916269624405354820, guid: 8408c4774717ec540a8305a88c494ba3,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3916269623972852779, guid: 8408c4774717ec540a8305a88c494ba3,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -714431691
-      objectReference: {fileID: 0}
-    - target: {fileID: 3916269623972852779, guid: 8408c4774717ec540a8305a88c494ba3,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8408c4774717ec540a8305a88c494ba3, type: 3}

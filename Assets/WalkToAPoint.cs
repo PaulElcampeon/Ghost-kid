@@ -33,9 +33,8 @@ public class WalkToAPoint : StateMachineBehaviour
 
         if(animator.GetComponent<Rigidbody2D>().transform.position.x == xPos)
         {
-            animator.SetBool("missionComplete", true);
+            animator.SetBool("isWaiting", true);
         }
-
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
