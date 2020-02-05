@@ -6,7 +6,6 @@ public class Father : MonoBehaviour
 {
     public DestroyToys mission;
     public bool missionCompleted;
-    public GameObject hearts;
     public int floorId;
 
     void Update()
@@ -29,8 +28,6 @@ public class Father : MonoBehaviour
                     GetComponent<Animator>().SetBool("isWalking", false);
 
                     GetComponent<Animator>().SetBool("missionComplete", true);
-                    //hearts.SetActive(true);
-
                 }
             }
         }

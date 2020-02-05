@@ -8,6 +8,8 @@ public class MissionCompleteState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<NPC>().heartParticles.SetActive(true);
+        animator.SetBool("isWaiting", false);
+        animator.SetBool("isWalking", false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

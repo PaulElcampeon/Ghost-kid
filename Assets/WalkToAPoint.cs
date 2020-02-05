@@ -5,14 +5,16 @@ using UnityEngine;
 public class WalkToAPoint : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.SetBool("missionComplete", false);
+
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         float xPos = animator.GetComponent<NPC>().missionCompleteAreaXPosition;
         if (xPos > animator.GetComponent<Rigidbody2D>().transform.position.x)
         {
@@ -34,6 +36,7 @@ public class WalkToAPoint : StateMachineBehaviour
         if(animator.GetComponent<Rigidbody2D>().transform.position.x == xPos)
         {
             animator.SetBool("isWaiting", true);
+            animator.SetBool("allMissionsCompleted", false);
         }
     }
 

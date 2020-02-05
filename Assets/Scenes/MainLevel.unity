@@ -1628,6 +1628,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 792129483, guid: 14c5da71036c23841ad0ef3e28cdcd45, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c5da71036c23841ad0ef3e28cdcd45, type: 3}
 --- !u!1 &453734517
@@ -5138,7 +5142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1285140769
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12982,6 +12986,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fader
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}
