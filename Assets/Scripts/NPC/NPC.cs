@@ -24,6 +24,8 @@ public class NPC : MonoBehaviour
     public float minXPosition;
     public float maxXPosition;
 
+    public GameObject heartParticles;
+
     public GameObject itemThatJustMadeASound;
 
     void Start()
