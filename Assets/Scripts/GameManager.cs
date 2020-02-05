@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
        if (allMissionsComplete)
         {
             Debug.Log("All Missions Completed");
-            ScreenFade.instance.FadeToBlack();
+            StartCoroutine(FadeScreenLate());
             StartCoroutine(LoadMainMenu());
         }
     }
@@ -143,9 +143,16 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator LoadMainMenu()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(15f);
         GameOver();
     }
+
+    public IEnumerator FadeScreenLate()
+    {
+        yield return new WaitForSeconds(12f);
+        ScreenFade.instance.FadeToBlack();
+
+    } 
 
     /*public void MoveAllCharactersToRightSideOfHouse()
     {

@@ -117,7 +117,9 @@ MonoBehaviour:
   isWaiting: 0
   isWaitingInFear: 0
   isMissionComplete: 0
+  missionCompleteAreaXPosition: 14.01
   isMovingRight: 1
+  startedAllMissionsCompleteAnimation: 0
   minXPosition: -5.5
   maxXPosition: 21
   itemThatJustMadeASound: {fileID: 0}

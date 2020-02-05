@@ -60,7 +60,9 @@ MonoBehaviour:
   isWaiting: 0
   isWaitingInFear: 0
   isMissionComplete: 0
+  missionCompleteAreaXPosition: 21
   isMovingRight: 1
+  startedAllMissionsCompleteAnimation: 0
   minXPosition: -5.5
   maxXPosition: 21
   itemThatJustMadeASound: {fileID: 0}
@@ -368,7 +370,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.0472298, y: 0.44794655}
+  m_Offset: {x: -1.8993181, y: 0.44794655}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -379,7 +381,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9479616, y: 2.3627126}
+  m_Size: {x: 3.6521375, y: 2.3627126}
   m_EdgeRadius: 0
 --- !u!114 &5498109079670921905
 MonoBehaviour:

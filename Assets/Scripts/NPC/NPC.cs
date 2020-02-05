@@ -15,9 +15,11 @@ public class NPC : MonoBehaviour
     public bool isWaiting;
     public bool isWaitingInFear;
     public bool isMissionComplete;
+    public float missionCompleteAreaXPosition;
 
     //This should always start off as false since we have our sprites already moving towards the left by default
     public bool isMovingRight;
+    public bool startedAllMissionsCompleteAnimation = false;
 
     public float minXPosition;
     public float maxXPosition;
@@ -27,6 +29,15 @@ public class NPC : MonoBehaviour
     void Start()
     {
         isMovingRight = false;
+    }
+
+    public void Update()
+    {
+       if(GameManager.instance.allMissionsComplete && GetComponent<Rigidbody2D>().transform.position.x != missionCompleteAreaXPosition && !startedAllMissionsCompleteAnimation) 
+        {
+            startedAllMissionsCompleteAnimation = true;
+            GetComponent<Animator>().SetBool("allMissionsCompleted", true);
+        }
     }
 
     public void RestartWalkCycleFromWaitingInFearPosition()
@@ -127,6 +138,13 @@ public class NPC : MonoBehaviour
     public void MoveToPosition(Vector3 targetPosition)
     {
         Vector2 newPosition = Vector2.MoveTowards(rgb.position, new Vector2(targetPosition.x, rgb.position.y), runSpeed * Time.deltaTime);
+
+        rgb.MovePosition(newPosition);
+    }
+
+    public void MoveToPositionWalking(Vector3 targetPosition)
+    {
+        Vector2 newPosition = Vector2.MoveTowards(rgb.position, new Vector2(targetPosition.x, rgb.position.y), walkSpeed * Time.deltaTime);
 
         rgb.MovePosition(newPosition);
     }
