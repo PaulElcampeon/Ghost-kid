@@ -6,19 +6,9 @@ public class SoundDetector : MonoBehaviour
 {
     public GameObject npc;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     public bool AreWeHearingAnItemMoveAbout(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Possessable"))
+        if (other.gameObject.CompareTag("Possessable") && !npc.GetComponent<NPC>().isMissionComplete)
         {
             return other.gameObject.GetComponent<Possessed>().isPlayerPresent && other.gameObject.GetComponent<PossessableMovement>().isMoving;
         }
