@@ -51,4 +51,12 @@ public class PriestManager : MonoBehaviour
             priest.GetComponent<Rigidbody2D>().position = new Vector3(rightSideOfHouseXPos, priestPosition.y, priestPosition.z);
         }
     }
+
+    public void DeactivateAllPriests()
+    {
+        foreach(GameObject priest in priests)
+        {
+            priest.SetActive(false);
+        }
+    }
 }

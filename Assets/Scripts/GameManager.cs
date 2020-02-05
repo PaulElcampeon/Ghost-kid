@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool allMissionsComplete;
     public bool canMove = true;
     public bool allMoved = true;
+    public bool hasMaxFearLevelBeenReached;
 
     public Floor[] floors;
     public Slider fearLevelBar;
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
        if (allMissionsComplete)
         {
             Debug.Log("All Missions Completed");
+            PriestManager.instance.DeactivateAllPriests();
             StartCoroutine(FadeScreenLate());
             StartCoroutine(LoadMainMenu());
         }
@@ -67,6 +69,7 @@ public class GameManager : MonoBehaviour
 
             if(fearLevel == fearLevelMax)
             {
+                hasMaxFearLevelBeenReached = true;
                 PriestManager.instance.Spawn();
             }
             UpdateFreakOMeter();
@@ -76,7 +79,7 @@ public class GameManager : MonoBehaviour
 
     public void DecreaseFreakOMeter()
     {
-        if (fearLevel > 0)
+        if (fearLevel > 0 && !hasMaxFearLevelBeenReached)
         {
             fearLevel--;
         }
