@@ -24,7 +24,6 @@ public class Possessed : MonoBehaviour
             } else
             {
                 Unpossess();
-                //GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetBool("isHidden",false);
             }
         }
 

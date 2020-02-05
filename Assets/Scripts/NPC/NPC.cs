@@ -22,13 +22,8 @@ public class NPC : MonoBehaviour
     public float minXPosition;
     public float maxXPosition;
 
-    //public bool shouldGoForward = true;
-
-
     public GameObject itemThatJustMadeASound;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         isMovingRight = false;
@@ -150,14 +145,6 @@ public class NPC : MonoBehaviour
             GetComponent<Animator>().SetBool("isWalking", false);
             isWaiting = true;
             GetComponent<Animator>().SetBool("isWaiting", true);
-        }
-    }
-
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("WaitingPosition"))
-        {
-
         }
     }
 }

@@ -9,7 +9,7 @@ public class DoorOpeningLeft : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("NPC") || other.gameObject.CompareTag("Priest"))
         {
             if (!other.gameObject.GetComponent<NPC>().isMovingRight)
             {
@@ -22,8 +22,6 @@ public class DoorOpeningLeft : MonoBehaviour
                 doorToClose.SetActive(false);
                 doorToOpen.SetActive(true);
             }
-
-
         }
     }
 }

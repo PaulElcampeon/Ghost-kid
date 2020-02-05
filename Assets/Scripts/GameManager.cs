@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,22 +12,22 @@ public class GameManager : MonoBehaviour
     public bool gamePaused;
     public bool isPossessing;
     public bool isHiding;
+    public bool isDead;
+    public bool allMissionsComplete;
     public bool canMove = true;
     public bool allMoved = true;
 
+    public List<Floor> floors;
     public GameObject gameOverScreen;
-    GameObject[] npcs;
-    //public GameObject FearLevelBar;
+    public Slider fearLevelBar;
 
     public static GameManager instance;
-    // Start is called before the first frame update
+
     void Start()
     {
         instance = this;
-        npcs = GameObject.FindGameObjectsWithTag("NPC");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -41,37 +42,46 @@ public class GameManager : MonoBehaviour
             }
         }
 
+       if(isDead)
+       {
+            GameOver();
+       }
 
-       /* if (fearLevel >= fearLevelMax)
+       if (allMissionsComplete)
         {
-            gameEnded = true;
-
-            if (gameEnded)
-            {
-
-            }
-        }*/
-
-       /* if (CheckIfAllMissionsCompleted())
-        {
-            MoveAllCharactersToRightSideOfHouse();
-
-            if(allMoved)
-            {
-                Debug.Log("All Chars Moved");
-            }
-        }*/
-
+            Debug.Log("All Missions Completed");
+            GameOver();
+        }
     }
 
-    public void IncreaseFearLevel(float amount)
+    public void IncreaseFreakOMeter()
     {
+        if(fearLevel < fearLevelMax)
+        {
+            fearLevel++;
 
+            if(fearLevel == fearLevelMax)
+            {
+                PriestManager.instance.Spawn();
+            }
+            UpdateFreakOMeter();
+        }
     }
 
-    public void DecreaseFearLevel(float amount)
+    public void DecreaseFreakOMeter()
     {
+        if (fearLevel > 0)
+        {
+            fearLevel--;
+        }
 
+        UpdateFreakOMeter();
+    }
+
+    public void UpdateFreakOMeter()
+    {
+        fearLevelBar.maxValue = fearLevelMax;
+        fearLevelBar.value = fearLevel;
     }
 
     public void Pause()
@@ -88,22 +98,42 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        SceneManager.LoadScene("Menu");
     }
 
-    public bool CheckIfAllMissionsCompleted()
+    public void CompleteAMission(int floorId)
     {
-        for (int i = 0; i < npcs.Length; i++)
+        foreach(Floor floor in floors)
         {
-            if(!npcs[i].gameObject.GetComponent<NPC>().isMissionComplete)
+            if(floor.floorId == floorId)
             {
-                return false;
+                floor.isMissionComplete = true;
+                DecreaseFreakOMeter();
             }
         }
-        return true;
+        UpdateAllMissionsCompleted();
     }
 
-    public void MoveAllCharactersToRightSideOfHouse()
+
+    public void UpdateAllMissionsCompleted()
+    {
+        allMissionsComplete = true;
+
+        foreach (Floor floor in floors)
+        {
+            if(!floor.isMissionComplete)
+            {
+                allMissionsComplete = false;
+            }
+        }
+
+        if(allMissionsComplete)
+        {
+            gameEnded = true;
+        }
+    }
+
+    /*public void MoveAllCharactersToRightSideOfHouse()
     {
         allMoved = true;
         for(int i = 0; i < npcs.Length; i++)
@@ -116,5 +146,5 @@ public class GameManager : MonoBehaviour
                 allMoved = false;
             } 
         }
-    }
+    }*/
 }

@@ -6,16 +6,6 @@ public class InteractionZone : MonoBehaviour
 {
     public GameObject interactionObject;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Possessable") || other.gameObject.CompareTag("toys"))
