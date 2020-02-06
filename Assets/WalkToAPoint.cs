@@ -35,8 +35,9 @@ public class WalkToAPoint : StateMachineBehaviour
 
         if(animator.GetComponent<Rigidbody2D>().transform.position.x == xPos)
         {
-            animator.SetBool("isWaiting", true);
-            animator.SetBool("allMissionsCompleted", false);
+            Debug.Log("My x pos " + animator.GetComponent<Rigidbody2D>().transform.position.x + " xPos to get to " + xPos);
+            animator.SetBool("waitngForGameToEnd", true);
+            //animator.SetBool("allMissionsCompleted", false);
         }
     }
 

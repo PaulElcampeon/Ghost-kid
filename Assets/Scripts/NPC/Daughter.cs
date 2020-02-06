@@ -6,7 +6,6 @@ public class Daughter : MonoBehaviour
 {
     public OpenDrawer mission;
     public bool missionCompleted;
-    public GameObject hearts;
     public int floorId;
 
     void Update()
@@ -29,7 +28,6 @@ public class Daughter : MonoBehaviour
                     GetComponent<Animator>().SetBool("isWalking", false);
 
                     GetComponent<Animator>().SetBool("missionComplete", true);
-                    //hearts.SetActive(true);
                 }
             }
         }
