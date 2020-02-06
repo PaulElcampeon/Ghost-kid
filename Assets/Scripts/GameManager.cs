@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             isDead = false;
             Debug.Log("You are dead");
             ScreenFade.instance.FadeToBlack();
-            StartCoroutine(LoadMainMenu(4f));
+            StartCoroutine(LoadMainMenu(5f));
        }
 
        if (allMissionsComplete)

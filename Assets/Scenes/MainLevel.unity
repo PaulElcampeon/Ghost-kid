@@ -5087,7 +5087,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: da8599e755f7b0c42a12b02ec7588169, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.62
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -25882,6 +25882,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fader
       objectReference: {fileID: 0}
+    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26061,6 +26066,11 @@ PrefabInstance:
       propertyPath: mission
       value: 
       objectReference: {fileID: 847413131}
+    - target: {fileID: 4195961619798944765, guid: 501391f7519371f41928c4757fcb48c8,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501391f7519371f41928c4757fcb48c8, type: 3}
 --- !u!1001 &3815313514021338300
@@ -26417,6 +26427,11 @@ PrefabInstance:
       propertyPath: mission
       value: 
       objectReference: {fileID: 858982174}
+    - target: {fileID: 5160566712562409048, guid: 925b20e97cd3cdc438d3978688f91423,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 925b20e97cd3cdc438d3978688f91423, type: 3}
 --- !u!1001 &5498109078797316914
@@ -26491,6 +26506,11 @@ PrefabInstance:
       propertyPath: mission
       value: 
       objectReference: {fileID: 2465058548850943910}
+    - target: {fileID: 5498109079670921907, guid: 86d1ffd22e2eac64899d0e567b4d805f,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86d1ffd22e2eac64899d0e567b4d805f, type: 3}
 --- !u!1001 &5640851967203700335
