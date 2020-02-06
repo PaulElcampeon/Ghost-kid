@@ -82,7 +82,8 @@ GameObject:
   m_Component:
   - component: {fileID: 382242926909720598}
   - component: {fileID: 382242926909720601}
-  m_Layer: 0
+  - component: {fileID: 1907040300}
+  m_Layer: 17
   m_Name: DoorClosed_U (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,6 +153,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1907040300
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382242926909720600}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 5.92}
+    newSize: {x: 1.38, y: 5.92}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 5.92}
+  m_EdgeRadius: 0
 --- !u!1 &382242926924236203
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +259,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &667103183
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382242926984916241}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 5.92}
+    newSize: {x: 1.38, y: 5.92}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 5.92}
+  m_EdgeRadius: 0
 --- !u!1 &382242927154912779
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +432,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &131935857
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377004764818340623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 5.92}
+    newSize: {x: 1.38, y: 5.92}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 5.92}
+  m_EdgeRadius: 0
+--- !u!61 &1641228653
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5377004765056049889}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.38, y: 5.92}
+    newSize: {x: 1.38, y: 5.92}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 5.92}
+  m_EdgeRadius: 0
 --- !u!1001 &382242927253099944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -390,11 +495,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door Group (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5751952911308473323, guid: 907dc4f329401344cb7eabfb6715728c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5751952911308473324, guid: 907dc4f329401344cb7eabfb6715728c,
         type: 3}
@@ -451,11 +551,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5751952911291117223, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907dc4f329401344cb7eabfb6715728c, type: 3}
 --- !u!4 &5377004764833994308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5751952911308473324, guid: 907dc4f329401344cb7eabfb6715728c,
+    type: 3}
+  m_PrefabInstance: {fileID: 382242927253099944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5377004764818340623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5751952911291117223, guid: 907dc4f329401344cb7eabfb6715728c,
     type: 3}
   m_PrefabInstance: {fileID: 382242927253099944}
   m_PrefabAsset: {fileID: 0}
@@ -470,11 +581,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door Group (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5751952911308473323, guid: 907dc4f329401344cb7eabfb6715728c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5751952911308473324, guid: 907dc4f329401344cb7eabfb6715728c,
         type: 3}
@@ -531,11 +637,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5751952911291117223, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907dc4f329401344cb7eabfb6715728c, type: 3}
 --- !u!4 &5377004765071314858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5751952911308473324, guid: 907dc4f329401344cb7eabfb6715728c,
+    type: 3}
+  m_PrefabInstance: {fileID: 382242928094366790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5377004765056049889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5751952911291117223, guid: 907dc4f329401344cb7eabfb6715728c,
     type: 3}
   m_PrefabInstance: {fileID: 382242928094366790}
   m_PrefabAsset: {fileID: 0}
@@ -550,11 +667,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door Group
-      objectReference: {fileID: 0}
-    - target: {fileID: 5751952911308473323, guid: 907dc4f329401344cb7eabfb6715728c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5751952911308473324, guid: 907dc4f329401344cb7eabfb6715728c,
         type: 3}
@@ -611,11 +723,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5751952911291117223, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907dc4f329401344cb7eabfb6715728c, type: 3}
 --- !u!4 &382242927000174682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5751952911308473324, guid: 907dc4f329401344cb7eabfb6715728c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5377004764012774326}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &382242926984916241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5751952911291117223, guid: 907dc4f329401344cb7eabfb6715728c,
     type: 3}
   m_PrefabInstance: {fileID: 5377004764012774326}
   m_PrefabAsset: {fileID: 0}
