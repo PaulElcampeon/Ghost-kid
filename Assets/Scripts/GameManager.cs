@@ -46,10 +46,12 @@ public class GameManager : MonoBehaviour
 
        if(isDead)
        {
+            //We do this so that the code in this block only gets executed once
             isDead = false;
+
             Debug.Log("You are dead");
-            ScreenFade.instance.FadeToBlack();
             StartCoroutine(LoadMainMenu(5f));
+            ScreenFade.instance.FadeToBlack();
        }
 
        if (allMissionsComplete)
