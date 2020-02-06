@@ -10,11 +10,6 @@ public class Possessed : MonoBehaviour
     public int size;
     public GameObject hideableObject;
 
-    public void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) {
@@ -127,5 +122,6 @@ public class Possessed : MonoBehaviour
             canHide = false;
             hideableObject = null;
         }
+        ShowNoGlow();
     }
 }

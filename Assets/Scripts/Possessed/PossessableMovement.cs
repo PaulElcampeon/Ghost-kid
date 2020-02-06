@@ -11,11 +11,6 @@ public class PossessableMovement : MonoBehaviour
     public bool isMovingUp;
     public bool isMoving;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (GameManager.instance.canMove && !GameManager.instance.gamePaused && !GameManager.instance.isHiding && !GameManager.instance.gameEnded)
@@ -47,8 +42,6 @@ public class PossessableMovement : MonoBehaviour
             {
                 isMoving = false;
             }
-
-            //transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
         }
     }
 
