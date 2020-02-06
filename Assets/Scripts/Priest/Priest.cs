@@ -51,6 +51,7 @@ public class Priest : MonoBehaviour
         {
             if (!GameManager.instance.isDead)
             {
+                other.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
                 other.gameObject.GetComponent<Animator>().SetBool("isDead", true);
             }
         }

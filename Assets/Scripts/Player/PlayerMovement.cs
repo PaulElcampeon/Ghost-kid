@@ -10,11 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public bool isMovingRight;
     public bool isMovingUp;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (GameManager.instance.canMove && !GameManager.instance.gamePaused && !GameManager.instance.isHiding &&  !GameManager.instance.isPossessing && !GameManager.instance.gameEnded)
@@ -38,8 +33,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 MoveDown();
             }
-
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+            //transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
         }
     }
 
