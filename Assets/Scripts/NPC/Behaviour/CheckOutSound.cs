@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckOutSound : StateMachineBehaviour
 {
+    //NOT USING THIS CODE AT THE MOMENT
     private Vector3 positionToMoveTo;
     public bool positionToMoveToXAxisIsGreater;
 

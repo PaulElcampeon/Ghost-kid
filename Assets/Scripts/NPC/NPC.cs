@@ -105,7 +105,7 @@ public class NPC : MonoBehaviour
             if (rgb.position.x == minXPosition)
             {
                 GetComponent<Animator>().SetBool("isWaiting", false);
-                GetComponent<Animator>().SetBool("checkOutSound", false);
+                //GetComponent<Animator>().SetBool("checkOutSound", false);
                 isRunningAway = false;
                 GetComponent<Animator>().SetBool("isRunning", false);
                 isWaitingInFear = true;
@@ -128,7 +128,7 @@ public class NPC : MonoBehaviour
             if (rgb.position.x == maxXPosition)
             {
                 GetComponent<Animator>().SetBool("isWaiting", false);
-                GetComponent<Animator>().SetBool("checkOutSound", false);
+                //GetComponent<Animator>().SetBool("checkOutSound", false);
                 isRunningAway = false;
                 GetComponent<Animator>().SetBool("isRunning", false);
                 isWaitingInFear = true;
@@ -151,12 +151,13 @@ public class NPC : MonoBehaviour
         rgb.MovePosition(newPosition);
     }
 
-    public void CancelInspectingSound()
+    //CURRENTLY NOT USING THIS CODE AT THE MOMENT
+    /*public void CancelInspectingSound()
     {
         isInspectingSound = false;
         GetComponent<Animator>().SetBool("checkOutSound", false);
         GetComponent<Animator>().SetBool("isWalking", false);
-    }
+    }*/
 
     public void OnTriggerEnter2D(Collider2D other)
     {

@@ -15,6 +15,5 @@ public class OpenGarderDoor : MonoBehaviour
             closeDoor.SetActive(false);
             openedDoor.SetActive(true);
         }
-        
     }
 }

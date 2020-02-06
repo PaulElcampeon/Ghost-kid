@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoundDetector : MonoBehaviour
 {
+    //NOT USING THIS CODE AT THE MOMENT
     public GameObject npc;
 
     public bool AreWeHearingAnItemMoveAbout(Collider2D other)

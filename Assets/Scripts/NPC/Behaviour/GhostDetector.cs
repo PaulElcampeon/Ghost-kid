@@ -10,20 +10,11 @@ public class GhostDetector : MonoBehaviour
     {
         if (AreWeCollidingWithAMovingPossessable(other))
         {
-       
-            npc.GetComponent<Animator>().SetBool("isWaiting", false);
-            npc.GetComponent<Animator>().SetBool("isWaitingInFear", false);
-            npc.GetComponent<Animator>().SetBool("checkOutSound", false);
-            npc.GetComponent<Animator>().SetBool("isWalking", false);
             npc.GetComponent<Animator>().SetBool("isShocked", true);
         }
 
         if (AreWeCollidingWithGhost(other))
         {
-            npc.GetComponent<Animator>().SetBool("isWaiting", false);
-            npc.GetComponent<Animator>().SetBool("isWaitingInFear", false);
-            npc.GetComponent<Animator>().SetBool("checkOutSound", false);
-            npc.GetComponent<Animator>().SetBool("isWalking", false);
             npc.GetComponent<Animator>().SetBool("isShocked", true);
         }
     }
@@ -32,32 +23,24 @@ public class GhostDetector : MonoBehaviour
     {
         if (AreWeCollidingWithAMovingPossessable(other))
         {
+            //CURRENTLY WE ARE NOT CHECKING SOUND SO THIS CODE IS REDUNDANT
             //Check if we are inspecting a sound and if so cancel it
-            if (npc.GetComponent<NPC>().isInspectingSound)
+            /*if (npc.GetComponent<NPC>().isInspectingSound)
             {
                 npc.GetComponent<NPC>().CancelInspectingSound();
-            }
-
+            }*/
             npc.GetComponent<NPC>().isRunningAway = true;
-            npc.GetComponent<Animator>().SetBool("isWaiting", false);
-            npc.GetComponent<Animator>().SetBool("isWaitingInFear", false);
-            npc.GetComponent<Animator>().SetBool("checkOutSound", false);
-            npc.GetComponent<Animator>().SetBool("isWalking", false);
             npc.GetComponent<Animator>().SetBool("isShocked", true);
         }
 
         if (AreWeCollidingWithGhost(other))
         {
-            if (npc.GetComponent<NPC>().isInspectingSound)
+            //CURRENTLY WE ARE NOT CHECKING SOUND SO THIS CODE IS REDUNDANT
+            /*if (npc.GetComponent<NPC>().isInspectingSound)
             {
                 npc.GetComponent<NPC>().CancelInspectingSound();
-            }
-
+            }*/
             npc.GetComponent<NPC>().isRunningAway = true;
-            npc.GetComponent<Animator>().SetBool("isWaiting", false);
-            npc.GetComponent<Animator>().SetBool("isWaitingInFear", false);
-            npc.GetComponent<Animator>().SetBool("checkOutSound", false);
-            npc.GetComponent<Animator>().SetBool("isWalking", false);
             npc.GetComponent<Animator>().SetBool("isShocked", true);
         }
     }
@@ -68,7 +51,6 @@ public class GhostDetector : MonoBehaviour
         {
             return other.gameObject.GetComponent<Possessed>().isPlayerPresent && other.gameObject.GetComponent<PossessableMovement>().isMoving;
         }
-
         return false;
     }
 

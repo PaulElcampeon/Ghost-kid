@@ -9,11 +9,6 @@ public class Hideable : MonoBehaviour
     public GameObject possessedObj;
     public bool isGhost;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))

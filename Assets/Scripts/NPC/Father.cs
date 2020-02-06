@@ -20,13 +20,6 @@ public class Father : MonoBehaviour
 
                 if (missionCompleted)
                 {
-                    GetComponent<Animator>().SetBool("isRunning", false);
-                    GetComponent<Animator>().SetBool("isWaiting", false);
-                    GetComponent<Animator>().SetBool("isWaitingInFear", false);
-                    GetComponent<Animator>().SetBool("checkOutSound", false);
-                    GetComponent<Animator>().SetBool("isShocked", false);
-                    GetComponent<Animator>().SetBool("isWalking", false);
-
                     GetComponent<Animator>().SetBool("missionComplete", true);
                 }
             }

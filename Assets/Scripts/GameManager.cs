@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
             isDead = false;
             Debug.Log("You are dead");
             ScreenFade.instance.FadeToBlack();
-            StartCoroutine(LoadMainMenuQuick());
+            StartCoroutine(LoadMainMenu(4f));
        }
 
        if (allMissionsComplete)
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             //Debug.Log("All Missions Completed");
             PriestManager.instance.DeactivateAllPriests();
             StartCoroutine(FadeScreenLate());
-            StartCoroutine(LoadMainMenuSlow());
+            StartCoroutine(LoadMainMenu(15f));
         }
     }
 
@@ -132,28 +132,21 @@ public class GameManager : MonoBehaviour
 
         foreach (Floor floor in floors)
         {
-            if(!floor.isMissionComplete)
+            if (!floor.isMissionComplete)
             {
                 allMissionsComplete = false;
             }
         }
 
-        if(allMissionsComplete)
+        if (allMissionsComplete)
         {
             gameEnded = true;
         }
     }
 
-
-    public IEnumerator LoadMainMenuQuick()
+    public IEnumerator LoadMainMenu(float timeInSeconds)
     {
-        yield return new WaitForSeconds(4f);
-        GameOver();
-    }
-
-    public IEnumerator LoadMainMenuSlow()
-    {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(timeInSeconds);
         GameOver();
     }
 
@@ -161,6 +154,5 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(11f);
         ScreenFade.instance.FadeToBlack();
-
     } 
 }
