@@ -171,7 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission: {fileID: 0}
   missionCompleted: 0
-  hearts: {fileID: 0}
   floorId: 0
 --- !u!61 &763075356
 BoxCollider2D:

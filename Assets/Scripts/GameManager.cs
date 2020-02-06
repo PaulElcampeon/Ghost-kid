@@ -163,19 +163,4 @@ public class GameManager : MonoBehaviour
         ScreenFade.instance.FadeToBlack();
 
     } 
-
-    /*public void MoveAllCharactersToRightSideOfHouse()
-    {
-        allMoved = true;
-        for(int i = 0; i < npcs.Length; i++)
-        {
-            Vector2 newPosition = Vector2.MoveTowards(npcs[i].transform.position, new Vector2(20.58f, npcs[i].transform.position.y), 2f * Time.deltaTime);
-            npcs[i].GetComponent<Rigidbody2D>().MovePosition(newPosition);
-
-            if (npcs[i].transform.position.x != 20.58f)
-            {
-                allMoved = false;
-            } 
-        }
-    }*/
 }

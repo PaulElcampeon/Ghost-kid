@@ -61,7 +61,7 @@ MonoBehaviour:
   isWaiting: 0
   isWaitingInFear: 0
   isMissionComplete: 0
-  missionCompleteAreaXPosition: 21
+  missionCompleteAreaXPosition: 21.2
   isMovingRight: 1
   startedAllMissionsCompleteAnimation: 0
   minXPosition: -5.5
@@ -171,7 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mission: {fileID: 0}
   missionCompleted: 0
-  hearts: {fileID: 0}
   floorId: 1
 --- !u!61 &713585400
 BoxCollider2D:
