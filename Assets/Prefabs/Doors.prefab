@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382242926142137582}
   - component: {fileID: 382242926142137580}
-  - component: {fileID: 382242926142137583}
+  - component: {fileID: 1252353033}
   m_Layer: 0
   m_Name: Trigger Garden door
   m_TagString: Untagged
@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8977175, y: -0.23597431}
+  m_Offset: {x: 0.95466805, y: -0.22009373}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,9 +56,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.795435, y: 0.5280514}
+  m_Size: {x: 6.372959, y: 0.55981255}
   m_EdgeRadius: 0
---- !u!114 &382242926142137583
+--- !u!114 &1252353033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,11 +67,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 382242926142137585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 118f81457fb4fd64b92f0d766e9acd36, type: 3}
+  m_Script: {fileID: 11500000, guid: a541d007ce671e5478c3990e8d470a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openedDoor: {fileID: 382242927770183657}
-  closeDoor: {fileID: 382242926909720600}
+  doorToOpen: {fileID: 382242927770183657}
+  doorToClose: {fileID: 382242926909720600}
 --- !u!1 &382242926909720600
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +556,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 684417541812844879, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.7697873
+      objectReference: {fileID: 0}
+    - target: {fileID: 684417541812844879, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.4827805
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907dc4f329401344cb7eabfb6715728c, type: 3}
 --- !u!4 &5377004764833994308 stripped
@@ -642,6 +652,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 684417541812844879, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.98014164
+      objectReference: {fileID: 0}
+    - target: {fileID: 684417541812844879, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 8.07604
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907dc4f329401344cb7eabfb6715728c, type: 3}
 --- !u!4 &5377004765071314858 stripped
@@ -727,6 +747,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 684417541812844879, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.49423552
+      objectReference: {fileID: 0}
+    - target: {fileID: 684417541812844879, guid: 907dc4f329401344cb7eabfb6715728c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.3723135
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907dc4f329401344cb7eabfb6715728c, type: 3}

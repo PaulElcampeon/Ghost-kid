@@ -6,8 +6,8 @@ public class DoorOpeningMiddle : MonoBehaviour
 {
     public GameObject doorToOpen;
     public GameObject doorToClose;
-    public GameObject priest;
-    public GameObject npc;
+    private GameObject priest;
+    private GameObject npc;
 
     public void OnTriggerStay2D(Collider2D other)
     {
