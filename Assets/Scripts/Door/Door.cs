@@ -14,8 +14,7 @@ public class Door : MonoBehaviour
         {
             door.GetComponent<Animator>().SetBool("isClosing", false);
             door.GetComponent<Animator>().SetBool("isOpening", true);
-            //doorToClose.SetActive(false);
-            //doorToOpen.SetActive(true);
+            door.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
@@ -35,16 +34,7 @@ public class Door : MonoBehaviour
         {
             door.GetComponent<Animator>().SetBool("isOpening", false);
             door.GetComponent<Animator>().SetBool("isClosing", true);
-
-            //doorToClose.SetActive(true);
-            //doorToOpen.SetActive(false);
-        }
-        else
-        {
-            //GetComponent<Animator>().SetBool("isClosing", true);
-
-            //doorToOpen.SetActive(true);
-            //doorToClose.SetActive(false);
+            door.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 }
