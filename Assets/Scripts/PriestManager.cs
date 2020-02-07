@@ -9,6 +9,7 @@ public class PriestManager : MonoBehaviour
     public float leftSideOfHouseXPos;
     public float rightSideOfHouseXPos;
     public float middleOfHouseXPos;
+    public AudioSource[] bgm;
 
     public static PriestManager instance;
 
@@ -19,6 +20,7 @@ public class PriestManager : MonoBehaviour
 
     public void Spawn()
     {
+        SoundEngine.instance.PlayPriestMusic(bgm, 2f, 0.7f);
         List<int> availableFloors = GetAllAvailableFloors();
         int randomFloor = availableFloors[Random.Range(0, availableFloors.Count)];
         GivePriestSpawnPoint(priests[randomFloor]);

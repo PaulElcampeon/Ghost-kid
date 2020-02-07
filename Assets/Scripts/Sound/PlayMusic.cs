@@ -6,7 +6,7 @@ public class PlayMusic : MonoBehaviour
 {
     public AudioSource[] bgm;
     public float timeToFadeIn;
-    public int maxVolume;
+    public float maxVolume;
 
     public void OnTriggerEnter2D(Collider2D other)
     {

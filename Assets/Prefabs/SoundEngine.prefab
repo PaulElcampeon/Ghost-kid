@@ -1875,7 +1875,8 @@ MonoBehaviour:
   - {fileID: 7089827201084924852}
   - {fileID: 7089827200740371186}
   - {fileID: 7089827200946959153}
-  timeForMusicToFadeOut: 4
+  timeForMusicToFadeOut: 2
+  hasPriestSpawned: 0
 --- !u!1001 &2728104521623399494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1942,6 +1943,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167894716046495375, guid: 22c8fdb1c8a65ef499db0050273d871d,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167894716388102130, guid: 22c8fdb1c8a65ef499db0050273d871d,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167894716581660340, guid: 22c8fdb1c8a65ef499db0050273d871d,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167894716509298551, guid: 22c8fdb1c8a65ef499db0050273d871d,
+        type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22c8fdb1c8a65ef499db0050273d871d, type: 3}

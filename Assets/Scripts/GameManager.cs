@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
             {
                 hasMaxFearLevelBeenReached = true;
                 PriestManager.instance.Spawn();
+
             }
             UpdateFreakOMeter();
             Debug.Log("Increased Freak O Meter");

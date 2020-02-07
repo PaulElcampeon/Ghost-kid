@@ -6,6 +6,7 @@ public class SoundEngine : MonoBehaviour
 {
     public AudioSource[] bgm;
     public float timeForMusicToFadeOut = 2f;
+    public bool hasPriestSpawned;
 
     public static SoundEngine instance;
 
@@ -19,14 +20,17 @@ public class SoundEngine : MonoBehaviour
         sfx.Play();
     }
 
-    public void UpdateMusic(AudioSource[] musicTracks, float timeToFadeIn, int maxVolume)
+    public void UpdateMusic(AudioSource[] musicTracks, float timeToFadeIn, float maxVolume)
     {
-        StopMusic();//Stop music that is already playing
-        PlayMusic(musicTracks, timeToFadeIn, maxVolume);//Start to play new music
+        if (!hasPriestSpawned)
+        {
+            StopMusic();//Stop music that is already playing
+            PlayMusic(musicTracks, timeToFadeIn, maxVolume);//Start to play new music
+        }
     }
 
 
-    public void PlayMusic(AudioSource[] musicTracks, float timeToFadeIn, int maxVolume)
+    public void PlayMusic(AudioSource[] musicTracks, float timeToFadeIn, float maxVolume)
     {
         foreach(AudioSource track in musicTracks)
         {
@@ -40,12 +44,13 @@ public class SoundEngine : MonoBehaviour
         {
             if(musicTrack.isPlaying)
             {
+                Debug.Log("Stop playign music " + musicTrack.name);
                 StartCoroutine(FadeOut(musicTrack, timeForMusicToFadeOut));
             }
         }
     }
 
-    public IEnumerator FadeIn(AudioSource audioSource, float FadeTime, int musicVolume)
+    public IEnumerator FadeIn(AudioSource audioSource, float FadeTime, float musicVolume)
     {
         audioSource.volume = 0;
         audioSource.Play();
@@ -69,6 +74,12 @@ public class SoundEngine : MonoBehaviour
         }
 
         audioSource.Stop();
-        audioSource.volume = startVolume;
+    }
+
+    public void PlayPriestMusic(AudioSource[] music, float fadeIn, float maxVolume)
+    {
+        hasPriestSpawned = true;
+        StopMusic();//Stop music that is already playing
+        PlayMusic(music, fadeIn, maxVolume);
     }
 }

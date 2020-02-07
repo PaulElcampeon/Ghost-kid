@@ -53,6 +53,8 @@ MonoBehaviour:
   leftSideOfHouseXPos: -5.5
   rightSideOfHouseXPos: 21
   middleOfHouseXPos: 9.2
+  bgm:
+  - {fileID: 0}
 --- !u!1001 &37212214887519380
 PrefabInstance:
   m_ObjectHideFlags: 0
