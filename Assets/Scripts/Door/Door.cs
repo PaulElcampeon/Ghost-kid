@@ -5,12 +5,12 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     private GameObject priest;
-    private GameObject npc;
+    private GameObject doorDetectorOnNPC;
     public GameObject door;
    
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("NPC") || other.gameObject.CompareTag("Priest"))
+        if (other.gameObject.CompareTag("Door Detector") || other.gameObject.CompareTag("Priest"))
         {
             door.GetComponent<Animator>().SetBool("isClosing", false);
             door.GetComponent<Animator>().SetBool("isOpening", true);
@@ -20,9 +20,9 @@ public class Door : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("Door Detector"))
         {
-            npc = null;
+            doorDetectorOnNPC = null;
         }
 
         if (other.gameObject.CompareTag("Priest"))
@@ -30,7 +30,7 @@ public class Door : MonoBehaviour
             priest = null;
         }
 
-        if (priest == null && npc == null)
+        if (priest == null && doorDetectorOnNPC == null)
         {
             door.GetComponent<Animator>().SetBool("isOpening", false);
             door.GetComponent<Animator>().SetBool("isClosing", true);

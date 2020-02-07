@@ -25,6 +25,7 @@ TagManager:
   - Priest
   - PlayerInteraction
   - QuestItem
+  - Door Detector
   layers:
   - Default
   - TransparentFX
