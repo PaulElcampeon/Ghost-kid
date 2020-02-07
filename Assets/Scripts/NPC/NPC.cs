@@ -17,6 +17,8 @@ public class NPC : MonoBehaviour
     public bool isMissionComplete;
     public float missionCompleteAreaXPosition;
 
+    public AudioSource scream;
+
     //This should always start off as false since we have our sprites already moving towards the left by default
     public bool isMovingRight;
     public bool startedAllMissionsCompleteAnimation = false;

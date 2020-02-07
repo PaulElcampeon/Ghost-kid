@@ -9,7 +9,9 @@ public class Possessed : MonoBehaviour
     public GameObject glow;
     public int size;
     public GameObject hideableObject;
-
+    bool hasPlayedSound;
+    public AudioSource possessSfx;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) {
@@ -24,12 +26,23 @@ public class Possessed : MonoBehaviour
 
         if(isPlayerPresent)
         {
+            PlayItemSoundOnce();
             ShowFullGlow();
         } else
         {
             ShowNoGlow();
         }
     }
+
+    public void PlayItemSoundOnce()
+    {
+        if (!hasPlayedSound && possessSfx != null)
+        {
+            possessSfx.Play();
+            hasPlayedSound = true;
+        }
+    }
+
 
     public void ShowSlightGlow()
     {

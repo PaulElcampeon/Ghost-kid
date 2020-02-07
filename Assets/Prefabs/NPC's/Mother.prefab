@@ -120,6 +120,7 @@ MonoBehaviour:
   isWaitingInFear: 0
   isMissionComplete: 0
   missionCompleteAreaXPosition: 26.7
+  scream: {fileID: 0}
   isMovingRight: 1
   startedAllMissionsCompleteAnimation: 0
   minXPosition: -5.5

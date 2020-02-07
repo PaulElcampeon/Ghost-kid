@@ -5,11 +5,13 @@ using UnityEngine;
 public class OpenDrawer : MonoBehaviour
 {
     public bool missionSuccess = false;
+    public AudioSource sfx;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("cupboard"))
         {
+            sfx.Play();
             Destroy(other.gameObject);
             missionSuccess = true;
         }
