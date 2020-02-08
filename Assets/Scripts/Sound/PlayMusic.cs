@@ -36,10 +36,40 @@ public class PlayMusic : MonoBehaviour
         }
     }
 
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
+        {
+           /* if (isMusicPlaying)
+            {
+                foreach (AudioSource track in bgmTrack)
+                {
+                    if (!track.isPlaying)
+                    {
+                        coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
+                    }
+                }
+            }
+            else*/
+            {
+                foreach (AudioSource track in bgmTrack)
+                {
+                    if (!track.isPlaying)
+                    {
+                        coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
+                    }
+                }
+                isMusicPlaying = true;
+            }
+        }
+    }
+
     public void OnTriggerExit2D(Collider2D other)
     {
         if (!GetComponent<BoxCollider2D>().bounds.Contains(Player.instance.GetComponent<Rigidbody2D>().transform.position))
         {
+            isMusicPlaying = false;
+
             if (coroutines.Count > 0)
             {
                 foreach (Coroutine routine in coroutines)
@@ -56,7 +86,6 @@ public class PlayMusic : MonoBehaviour
             foreach(AudioSource track in bgmTrack)
             {
                 coroutines.Add(StartCoroutine(SoundEngine.instance.FadeOut(track)));
-                isMusicPlaying = false;
             }
         }
     }

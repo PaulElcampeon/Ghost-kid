@@ -28,6 +28,12 @@ public class Possessed : MonoBehaviour
         {
             PlayItemSoundOnce();
             ShowFullGlow();
+            
+            if(isBoomBox())
+            {
+                PlayBoomBox();
+            }
+
         } else
         {
             ShowNoGlow();
@@ -126,6 +132,11 @@ public class Possessed : MonoBehaviour
             canHide = true;
             hideableObject = other.gameObject;
         }
+
+        if (other.tag == "Priest" && GameManager.instance.isPossessing && isPlayerPresent)
+        {
+            Unpossess();
+        }
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -136,5 +147,20 @@ public class Possessed : MonoBehaviour
             hideableObject = null;
         }
         ShowNoGlow();
+    }
+
+    public bool isBoomBox()
+    {
+        return gameObject.name == "BoomBox";
+    }
+
+    public void PlayBoomBox()
+    {
+        GetComponent<BoomBox>().isPlayerPresent = true;
+    }
+
+    public void DisableBoomBox()
+    {
+        GetComponent<BoomBox>().isPlayerPresent = false;
     }
 }

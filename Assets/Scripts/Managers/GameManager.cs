@@ -36,10 +36,11 @@ public class GameManager : MonoBehaviour
         {
             if (gamePaused)
             {
+                SoundEngine.instance.PlayPlaySound();
                 Resume();
-
             } else
             {
+                SoundEngine.instance.PlayPauseSound();
                 Pause();
             }
         }

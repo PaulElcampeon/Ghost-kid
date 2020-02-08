@@ -46,8 +46,8 @@ TagManager:
   - QuestItems
   - Grass
   - Door
-  - 
-  - 
+  - ItemColliders
+  - Floor
   - 
   - 
   - 

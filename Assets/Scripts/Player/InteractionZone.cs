@@ -26,12 +26,17 @@ public class InteractionZone : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if ((other.gameObject.CompareTag("Possessable") || other.gameObject.CompareTag("toys")) && !GameManager.instance.isPossessing && !GameManager.instance.isHiding)
+        if (other.gameObject.CompareTag("Possessable") && !GameManager.instance.isPossessing && !GameManager.instance.isHiding)
         {
             Player.instance.canPossess = false;
             Player.instance.possesableObj = null;
 
             other.gameObject.GetComponent<Possessed>().ShowNoGlow();
+
+            if (other.gameObject.GetComponent<Possessed>().isBoomBox())
+            {
+                other.gameObject.GetComponent<Possessed>().DisableBoomBox();
+            }
         }
 
         if (other.gameObject.CompareTag("Hideable"))

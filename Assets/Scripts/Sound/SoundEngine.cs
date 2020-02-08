@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundEngine : MonoBehaviour
 {
     public AudioSource[] bgm;
+    public AudioSource[] sfx;
     public float timeForMusicToFadeOut = 1f;
     public bool hasPriestSpawned;
 
@@ -62,5 +63,49 @@ public class SoundEngine : MonoBehaviour
         StopAllMusic();//Stop music that is already playing
         StartCoroutine(FadeIn(music[0], fadeIn, maxVolume));
         hasPriestSpawned = true;
+    }
+
+    public void PlayPauseSound()
+    {
+        foreach(AudioSource source in sfx)
+        {
+            if(source.name == "Pause Sound")
+            {
+                source.Play();
+            }
+        }
+    }
+
+    public void PlayExitSound()
+    {
+        foreach (AudioSource source in sfx)
+        {
+            if (source.name == "Exit Sound")
+            {
+                source.Play();
+            }
+        }
+    }
+
+    public void PlayPlaySound()
+    {
+        foreach (AudioSource source in sfx)
+        {
+            if (source.name == "Play Sound")
+            {
+                source.Play();
+            }
+        }
+    }
+
+    public void PlayItemDropSound()
+    {
+        foreach (AudioSource source in sfx)
+        {
+            if (source.name == "Item Drop sound")
+            {
+                source.Play();
+            }
+        }
     }
 }

@@ -224,6 +224,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1511899498}
+        m_MethodName: PlayCreditsSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &6974941
@@ -1243,6 +1254,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425944325}
   m_CullTransparentMesh: 0
+--- !u!1001 &441970675
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7089827200584246634, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1341.0273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
 --- !u!1 &465601302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,6 +1812,17 @@ MonoBehaviour:
       - m_Target: {fileID: 562517707}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1511899498}
+        m_MethodName: PlayBackSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2748,10 +2839,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3080,6 +3171,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HeartMendedParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008003920080820156, guid: 86b67073cf229d04e9c3c9feab5aaa18,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5008003920080820153, guid: 86b67073cf229d04e9c3c9feab5aaa18,
         type: 3}
