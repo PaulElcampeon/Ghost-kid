@@ -45,6 +45,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Intro Top
       objectReference: {fileID: 0}
+    - target: {fileID: 4973657898042590351, guid: f1be3d60234a5a745853cd26bb8c6076,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4973657898042590350, guid: f1be3d60234a5a745853cd26bb8c6076,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -169,6 +174,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level Intro Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622179634652691620, guid: 7316fcd7b067bbb4dbd56dcd2ed60b0a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6622179634652691621, guid: 7316fcd7b067bbb4dbd56dcd2ed60b0a,
         type: 3}
@@ -314,6 +324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level Intro Middle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041617648386616161, guid: ac3219aeb001ea44793b837f94535e11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8041617648386616174, guid: ac3219aeb001ea44793b837f94535e11,
         type: 3}

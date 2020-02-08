@@ -24,7 +24,7 @@ public class LevelIntro : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.gameObject.CompareTag("Player") && !hasPlayed)
+        if ((other.gameObject.CompareTag("Player") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent)) && !hasPlayed)
         {
             panel.SetActive(true);
             hasPlayed = true;
