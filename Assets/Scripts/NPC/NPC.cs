@@ -106,6 +106,7 @@ public class NPC : MonoBehaviour
 
             if (rgb.position.x == minXPosition)
             {
+                GetComponent<Animator>().SetBool("isShocked", false);
                 GetComponent<Animator>().SetBool("isWaiting", false);
                 //GetComponent<Animator>().SetBool("checkOutSound", false);
                 isRunningAway = false;

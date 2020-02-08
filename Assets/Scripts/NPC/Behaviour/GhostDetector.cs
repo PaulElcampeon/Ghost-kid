@@ -11,9 +11,7 @@ public class GhostDetector : MonoBehaviour
         if (AreWeCollidingWithAMovingPossessable(other))
         {
             npc.GetComponent<Animator>().SetBool("isShocked", true);
-        }
-
-        if (AreWeCollidingWithGhost(other))
+        } else if(AreWeCollidingWithGhost(other))
         {
             npc.GetComponent<Animator>().SetBool("isShocked", true);
         }
@@ -31,9 +29,7 @@ public class GhostDetector : MonoBehaviour
             }*/
             npc.GetComponent<NPC>().isRunningAway = true;
             npc.GetComponent<Animator>().SetBool("isShocked", true);
-        }
-
-        if (AreWeCollidingWithGhost(other))
+        } else if (AreWeCollidingWithGhost(other))
         {
             //CURRENTLY WE ARE NOT CHECKING SOUND SO THIS CODE IS REDUNDANT
             /*if (npc.GetComponent<NPC>().isInspectingSound)
