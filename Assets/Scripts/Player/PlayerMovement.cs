@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isMovingRight;
     public bool isMovingUp;
 
-    void Update()
+    void FixedUpdate()
     {
         if (GameManager.instance.canMove && !GameManager.instance.gamePaused && !GameManager.instance.isHiding &&  !GameManager.instance.isPossessing && !GameManager.instance.gameEnded)
         {

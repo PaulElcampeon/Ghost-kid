@@ -40,17 +40,6 @@ public class PlayMusic : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
         {
-           /* if (isMusicPlaying)
-            {
-                foreach (AudioSource track in bgmTrack)
-                {
-                    if (!track.isPlaying)
-                    {
-                        coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
-                    }
-                }
-            }
-            else*/
             {
                 foreach (AudioSource track in bgmTrack)
                 {

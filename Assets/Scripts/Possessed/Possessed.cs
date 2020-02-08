@@ -89,6 +89,11 @@ public class Possessed : MonoBehaviour
 
     public void Unpossess()
     {
+
+        if (isBoomBox())
+        {
+            DisableBoomBox();
+        }
         GameManager.instance.isPossessing = false;
 
         Player.instance.transform.position = transform.position;

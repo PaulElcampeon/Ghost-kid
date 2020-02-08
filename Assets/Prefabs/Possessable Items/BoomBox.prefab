@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2531691919754406870}
   - component: {fileID: 2531691919754406857}
   - component: {fileID: 2531691919754406856}
+  - component: {fileID: 995026165}
   m_Layer: 9
   m_Name: BoomBox
   m_TagString: Possessable
@@ -119,6 +120,7 @@ MonoBehaviour:
   glow: {fileID: 2531691920132737229}
   size: 0
   hideableObject: {fileID: 0}
+  possessSfx: {fileID: 0}
 --- !u!50 &2531691919754406870
 Rigidbody2D:
   serializedVersion: 4
@@ -192,6 +194,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5954776, y: 1.0075649}
   m_EdgeRadius: 0
+--- !u!114 &995026165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2531691919754406867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98ff18ad7687c24e976149aa1efc486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerPresent: 0
+  track: {fileID: 0}
+  isAlreadyPlaying: 0
 --- !u!1 &2531691920132737229
 GameObject:
   m_ObjectHideFlags: 0
