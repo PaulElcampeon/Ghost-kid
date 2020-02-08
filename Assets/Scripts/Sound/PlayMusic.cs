@@ -8,6 +8,7 @@ public class PlayMusic : MonoBehaviour
     private List<Coroutine> coroutines = new List<Coroutine>();
     public float timeToFadeIn;
     public float maxVolume;
+    public bool isMusicPlaying;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,10 +25,13 @@ public class PlayMusic : MonoBehaviour
                 }
                 coroutines.Clear();
             }
-
-            foreach (AudioSource track in bgmTrack)
+            if (!isMusicPlaying)
             {
-                coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
+                foreach (AudioSource track in bgmTrack)
+                {
+                    coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
+                    isMusicPlaying = true;
+                }
             }
         }
     }
@@ -52,6 +56,7 @@ public class PlayMusic : MonoBehaviour
             foreach(AudioSource track in bgmTrack)
             {
                 coroutines.Add(StartCoroutine(SoundEngine.instance.FadeOut(track)));
+                isMusicPlaying = false;
             }
         }
     }

@@ -8305,12 +8305,6 @@ Transform:
   m_Father: {fileID: 1304037071}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &2048062248 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7089827201283193747, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
-    type: 3}
-  m_PrefabInstance: {fileID: 7089827201921583291}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &2054804690 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2054804690, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
@@ -9613,11 +9607,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fader
       objectReference: {fileID: 0}
-    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9795,11 +9784,6 @@ PrefabInstance:
     - target: {fileID: 3531402467991795007, guid: 37c82ea0299aa8741b27e205c6ab81ea,
         type: 3}
       propertyPath: bgmTrack.Array.data[0]
-      value: 
-      objectReference: {fileID: 2048062248}
-    - target: {fileID: 3531402467991795007, guid: 37c82ea0299aa8741b27e205c6ab81ea,
-        type: 3}
-      propertyPath: bgmTrack.Array.data[1]
       value: 
       objectReference: {fileID: 2057185906}
     - target: {fileID: 3531402468890630630, guid: 37c82ea0299aa8741b27e205c6ab81ea,
