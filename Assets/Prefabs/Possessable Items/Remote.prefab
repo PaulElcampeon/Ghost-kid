@@ -119,6 +119,7 @@ MonoBehaviour:
   glow: {fileID: 6886076868277122866}
   size: 0
   hideableObject: {fileID: 0}
+  possessSfx: {fileID: 0}
 --- !u!50 &6886076866260800601
 Rigidbody2D:
   serializedVersion: 4
@@ -216,13 +217,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6886076868277122866}
-  m_LocalRotation: {x: -0, y: -0, z: 0.36342698, w: 0.9316227}
+  m_LocalRotation: {x: 0, y: 0, z: -0.09410823, w: 0.995562}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.266849, y: 1.266849, z: 1.2668492}
   m_Children: []
   m_Father: {fileID: 6886076866260800614}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.8}
 --- !u!212 &6886076868277122868
 SpriteRenderer:
   m_ObjectHideFlags: 0
