@@ -26,6 +26,7 @@ TagManager:
   - PlayerInteraction
   - QuestItem
   - Door Detector
+  - Music Detection
   layers:
   - Default
   - TransparentFX

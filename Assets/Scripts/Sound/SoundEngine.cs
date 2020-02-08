@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundEngine : MonoBehaviour
 {
     public AudioSource[] bgm;
-    public float timeForMusicToFadeOut = 2f;
+    public float timeForMusicToFadeOut = 1f;
     public bool hasPriestSpawned;
 
     public static SoundEngine instance;
@@ -20,55 +20,36 @@ public class SoundEngine : MonoBehaviour
         sfx.Play();
     }
 
-    public void UpdateMusic(AudioSource[] musicTracks, float timeToFadeIn, float maxVolume)
+    public void StopAllMusic()
     {
-        if (!hasPriestSpawned)
+        foreach (AudioSource track in bgm)
         {
-            StopMusic();//Stop music that is already playing
-            PlayMusic(musicTracks, timeToFadeIn, maxVolume);//Start to play new music
-        }
-    }
-
-
-    public void PlayMusic(AudioSource[] musicTracks, float timeToFadeIn, float maxVolume)
-    {
-        foreach(AudioSource track in musicTracks)
-        {
-            StartCoroutine(FadeIn(track, timeToFadeIn, maxVolume));
-        }
-    }
-
-    public void StopMusic()
-    {
-        foreach(AudioSource musicTrack in bgm)
-        {
-            if(musicTrack.isPlaying)
-            {
-                Debug.Log("Stop playign music " + musicTrack.name);
-                StartCoroutine(FadeOut(musicTrack, timeForMusicToFadeOut));
-            }
+            track.Stop();
         }
     }
 
     public IEnumerator FadeIn(AudioSource audioSource, float FadeTime, float musicVolume)
     {
-        audioSource.volume = 0;
-        audioSource.Play();
-        while (audioSource.volume < musicVolume)
+        if (!hasPriestSpawned)
         {
-            audioSource.volume += Time.deltaTime / FadeTime;
-
-            yield return null;
+            audioSource.Play();
+            while (audioSource.volume < musicVolume)
+            {
+                audioSource.volume += Time.deltaTime / FadeTime;
+                Debug.Log("Still trying to fade in " + audioSource.name);
+                yield return null;
+            }
         }
     }
 
-    public IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    public IEnumerator FadeOut(AudioSource audioSource)
     {
         float startVolume = audioSource.volume;
 
         while (audioSource.volume > 0)
         {
-            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+            audioSource.volume -= startVolume * Time.deltaTime / timeForMusicToFadeOut;
+            Debug.Log("Still trying to fade out " + audioSource.name);
 
             yield return null;
         }
@@ -78,8 +59,8 @@ public class SoundEngine : MonoBehaviour
 
     public void PlayPriestMusic(AudioSource[] music, float fadeIn, float maxVolume)
     {
+        StopAllMusic();//Stop music that is already playing
+        StartCoroutine(FadeIn(music[0], fadeIn, maxVolume));
         hasPriestSpawned = true;
-        StopMusic();//Stop music that is already playing
-        PlayMusic(music, fadeIn, maxVolume);
     }
 }

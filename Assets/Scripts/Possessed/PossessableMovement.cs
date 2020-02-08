@@ -48,6 +48,7 @@ public class PossessableMovement : MonoBehaviour
     public void MoveRight()
     {
         GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
+        Player.instance.GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
         isMovingRight = true;
         Flip();
     }
@@ -55,6 +56,7 @@ public class PossessableMovement : MonoBehaviour
     public void MoveLeft()
     {
         GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
+        Player.instance.GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
         isMovingRight = false;
         Flip();
 
@@ -63,12 +65,14 @@ public class PossessableMovement : MonoBehaviour
     public void MoveUp()
     {
         GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x, transform.position.y + +speed * Time.deltaTime, transform.position.z);
+        Player.instance.GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
         isMovingUp = true;
     }
 
     public void MoveDown()
     {
         isMovingUp = false;
+        Player.instance.GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
         GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
     }
 

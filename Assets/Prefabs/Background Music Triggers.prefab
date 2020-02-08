@@ -78,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.5674448, y: -5.143958}
+  m_Offset: {x: -3.5674438, y: -5.09725}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -89,7 +89,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 50.922882, y: 4.5088177}
+  m_Size: {x: 50.922882, y: 4.602234}
   m_EdgeRadius: 0
 --- !u!114 &3531402467991795007
 MonoBehaviour:
@@ -103,10 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1692de56dee9064bb021587456addd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm:
+  bgmTrack:
   - {fileID: 0}
   - {fileID: 0}
-  timeToFadeIn: 3
+  timeToFadeIn: 1.5
   maxVolume: 0.7
 --- !u!1 &3531402468692111930
 GameObject:
@@ -153,7 +153,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.439826, y: 7.462434}
+  m_Offset: {x: -14.439826, y: 7.61415}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -164,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 29.178122, y: 3.8084698}
+  m_Size: {x: 29.178122, y: 3.5050373}
   m_EdgeRadius: 0
 --- !u!114 &3531402468692111924
 MonoBehaviour:
@@ -178,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1692de56dee9064bb021587456addd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm:
+  bgmTrack:
   - {fileID: 0}
-  timeToFadeIn: 3
+  timeToFadeIn: 1.5
   maxVolume: 0.7
 --- !u!1 &3531402468890630628
 GameObject:
@@ -227,7 +227,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.439826, y: 0.6047907}
+  m_Offset: {x: -14.439826, y: 1.2798166}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -238,7 +238,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 29.178122, y: 3.5166492}
+  m_Size: {x: 29.178122, y: 4.274355}
   m_EdgeRadius: 0
 --- !u!114 &3531402468890630630
 MonoBehaviour:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1692de56dee9064bb021587456addd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm:
+  bgmTrack:
   - {fileID: 0}
-  timeToFadeIn: 3
+  timeToFadeIn: 1.5
   maxVolume: 0.7

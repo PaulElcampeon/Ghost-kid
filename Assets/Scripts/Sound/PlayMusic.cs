@@ -4,16 +4,55 @@ using UnityEngine;
 
 public class PlayMusic : MonoBehaviour
 {
-    public AudioSource[] bgm;
+    public AudioSource[] bgmTrack;
+    private List<Coroutine> coroutines = new List<Coroutine>();
     public float timeToFadeIn;
     public float maxVolume;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
         {
-            Debug.Log("Damnit");
-            SoundEngine.instance.UpdateMusic(bgm, timeToFadeIn, maxVolume);
-        } 
+            if (coroutines.Count > 0)
+            {
+                foreach (Coroutine routine in coroutines)
+                {
+                    if (routine != null)
+                    {
+                        StopCoroutine(routine);
+                    }
+                }
+                coroutines.Clear();
+            }
+
+            foreach (AudioSource track in bgmTrack)
+            {
+                coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
+            }
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (!GetComponent<BoxCollider2D>().bounds.Contains(Player.instance.GetComponent<Rigidbody2D>().transform.position))
+        {
+            if (coroutines.Count > 0)
+            {
+                foreach (Coroutine routine in coroutines)
+                {
+                    if (routine != null)
+                    {
+                        StopCoroutine(routine);
+                    }
+                }
+            }
+
+            coroutines.Clear();
+
+            foreach(AudioSource track in bgmTrack)
+            {
+                coroutines.Add(StartCoroutine(SoundEngine.instance.FadeOut(track)));
+            }
+        }
     }
 }
