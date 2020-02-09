@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public bool canMove = true;
     public bool allMoved = true;
     public bool hasMaxFearLevelBeenReached;
+    public GameObject menu;
 
     public Floor[] floors;
     public Slider fearLevelBar;
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
         {
             if (gamePaused)
             {
-                SoundEngine.instance.PlayPlaySound();
+                SoundEngine.instance.PlayPauseSound();
                 Resume();
             } else
             {
@@ -100,12 +101,14 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
+        menu.SetActive(true);
         gamePaused = true;
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
+        menu.SetActive(false);
         gamePaused = false;
         Time.timeScale = 1;
     }

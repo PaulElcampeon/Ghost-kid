@@ -8,6 +8,7 @@ public class Hideable : MonoBehaviour
     public bool isOccupied;
     public GameObject possessedObj;
     public bool isGhost;
+    public GameObject hideableSignifier;
 
     void Update()
     {
