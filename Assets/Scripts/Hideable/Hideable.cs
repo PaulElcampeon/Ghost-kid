@@ -27,7 +27,7 @@ public class Hideable : MonoBehaviour
 
         if (isGhost)
         {
-            Player.instance.transform.position = transform.position;
+            Player.instance.GetComponent<Rigidbody2D>().transform.position = GetComponent<Rigidbody2D>().transform.position;
             Player.instance.hideableObj = null;
             Player.instance.canHide = false;
             Player.instance.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;

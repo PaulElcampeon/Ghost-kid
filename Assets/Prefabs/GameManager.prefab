@@ -54,6 +54,7 @@ MonoBehaviour:
   canMove: 1
   allMoved: 0
   hasMaxFearLevelBeenReached: 0
+  menu: {fileID: 0}
   floors:
   - floorId: 0
     isMissionComplete: 0

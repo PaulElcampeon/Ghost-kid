@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6181819310449633141}
   m_Layer: 9
   m_Name: BasketBall
-  m_TagString: toys
+  m_TagString: Possessable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006269753, y: 0.048377633}
+  m_Offset: {x: -0.006269753, y: 0.04520634}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.070867, y: 1.3085744}
+  m_Size: {x: 1.070867, y: 1.3022318}
   m_EdgeRadius: 0
 --- !u!114 &6181819310449633143
 MonoBehaviour:
@@ -150,6 +150,7 @@ MonoBehaviour:
   glow: {fileID: 6181819311470359379}
   size: 0
   hideableObject: {fileID: 0}
+  possessSfx: {fileID: 0}
 --- !u!114 &6181819310449633142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +180,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0439533, y: 0.20349744}
+  m_Offset: {x: -0.0439533, y: 0.83881736}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -190,7 +191,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7701607, y: 1.582819}
+  m_Size: {x: 0.7701607, y: 2.853459}
   m_EdgeRadius: 0
 --- !u!1 &6181819311470359379
 GameObject:

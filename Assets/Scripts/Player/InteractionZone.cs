@@ -20,7 +20,6 @@ public class InteractionZone : MonoBehaviour
         {
             Player.instance.canHide = true;
             Player.instance.hideableObj = other.gameObject;
-            other.gameObject.GetComponent<Hideable>().hideableSignifier.SetActive(true);
         }
     }
 
@@ -43,7 +42,6 @@ public class InteractionZone : MonoBehaviour
         {
             Player.instance.canHide = false;
             Player.instance.hideableObj = null;
-            other.gameObject.GetComponent<Hideable>().hideableSignifier.SetActive(false);
         }
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //[Header("Item Type")]//do something with this
     public float fearLevel;
     public float fearLevelMax;
     public bool gameEnded;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
             } else
             {
                 SoundEngine.instance.PlayPauseSound();
+                menu.SetActive(true);
                 Pause();
             }
         }
@@ -101,7 +103,6 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        menu.SetActive(true);
         gamePaused = true;
         Time.timeScale = 0;
     }

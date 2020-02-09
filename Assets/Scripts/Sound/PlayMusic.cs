@@ -9,11 +9,14 @@ public class PlayMusic : MonoBehaviour
     public float timeToFadeIn;
     public float maxVolume;
     public bool isMusicPlaying;
+    public bool stayed;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
+        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent) || (other.gameObject.CompareTag("Hideable") && other.gameObject.GetComponent<Hideable>().isOccupied))
         {
+            Debug.Log("Player just Entered");
+
             if (coroutines.Count > 0)
             {
                 foreach (Coroutine routine in coroutines)
@@ -38,26 +41,28 @@ public class PlayMusic : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
+        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent) || (other.gameObject.CompareTag("Hideable") && other.gameObject.GetComponent<Hideable>().isOccupied))
         {
+            
+            foreach (AudioSource track in bgmTrack)
             {
-                foreach (AudioSource track in bgmTrack)
+                if (!track.isPlaying)
                 {
-                    if (!track.isPlaying)
-                    {
-                        coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
-                    }
+                    coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
                 }
-                isMusicPlaying = true;
             }
+            isMusicPlaying = true;
+            
         }
     }
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if (!GetComponent<BoxCollider2D>().bounds.Contains(Player.instance.GetComponent<Rigidbody2D>().transform.position))
+        if (!GetComponent<BoxCollider2D>().bounds.Contains(Player.instance.transform.position))
         {
+            Debug.Log("Player just exited");
             isMusicPlaying = false;
+            stayed = false;
 
             if (coroutines.Count > 0)
             {

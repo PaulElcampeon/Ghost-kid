@@ -114,7 +114,7 @@ public class Possessed : MonoBehaviour
 
     public bool CollidingWithAHideableBiggerThanMe(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Hideable") || other.gameObject.CompareTag("Hideable"))
+        if (other.gameObject.CompareTag("Hideable"))
         {
             return other.gameObject.GetComponent<Hideable>().size >= size;
         }
@@ -123,7 +123,7 @@ public class Possessed : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (CollidingWithAHideableBiggerThanMe(other))
+        if (CollidingWithAHideableBiggerThanMe(other) && isPlayerPresent)
         {
             canHide = true;
             hideableObject = other.gameObject;
@@ -132,7 +132,7 @@ public class Possessed : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (CollidingWithAHideableBiggerThanMe(other))
+        if (CollidingWithAHideableBiggerThanMe(other) && isPlayerPresent)
         {
             canHide = true;
             hideableObject = other.gameObject;
