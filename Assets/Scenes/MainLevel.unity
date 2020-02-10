@@ -9665,11 +9665,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fader
       objectReference: {fileID: 0}
-    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11376,9 +11371,5 @@ PrefabInstance:
       propertyPath: fearLevelBar
       value: 
       objectReference: {fileID: 727341243}
-    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
-      propertyPath: fearLevelMax
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
