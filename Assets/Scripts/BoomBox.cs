@@ -7,10 +7,16 @@ public class BoomBox : MonoBehaviour
     public bool isPlayerPresent;
     public AudioSource track;
     public bool isAlreadyPlaying;
+    public static BoomBox instance;
+
+    public void Start()
+    {
+        instance = this;
+    }
 
     void Update()
     {
-       if(isPlayerPresent && !isAlreadyPlaying)
+       if(isPlayerPresent && !isAlreadyPlaying && !SoundEngine.instance.hasPriestSpawned)
         {
             isAlreadyPlaying = true;
             track.Play();

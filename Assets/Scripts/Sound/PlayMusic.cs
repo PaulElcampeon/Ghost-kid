@@ -41,18 +41,38 @@ public class PlayMusic : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent) || (other.gameObject.CompareTag("Hideable") && other.gameObject.GetComponent<Hideable>().isOccupied))
+        if (!BoomBox.instance.isAlreadyPlaying)
         {
-            
-            foreach (AudioSource track in bgmTrack)
+            if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent) || (other.gameObject.CompareTag("Hideable") && other.gameObject.GetComponent<Hideable>().isOccupied))
             {
-                if (!track.isPlaying)
+
+                foreach (AudioSource track in bgmTrack)
                 {
-                    coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
+                    if (!track.isPlaying)
+                    {
+                        coroutines.Add(StartCoroutine(SoundEngine.instance.FadeIn(track, timeToFadeIn, maxVolume)));
+                    }
+                }
+                isMusicPlaying = true;
+
+            }
+        } else
+        {
+            foreach (Coroutine routine in coroutines)
+            {
+                if (routine != null)
+                {
+                    StopCoroutine(routine);
                 }
             }
-            isMusicPlaying = true;
-            
+
+            foreach (AudioSource track in bgmTrack)
+            {
+                if (track.isPlaying)
+                {
+                    coroutines.Add(StartCoroutine(SoundEngine.instance.FadeOut(track)));
+                }
+            }
         }
     }
 

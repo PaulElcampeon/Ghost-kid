@@ -616,21 +616,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6522637854457945973, guid: 24eacedb777601f4ab9f691f96fe7351,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.77515
-      objectReference: {fileID: 0}
-    - target: {fileID: 6522637854457945973, guid: 24eacedb777601f4ab9f691f96fe7351,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.77515
-      objectReference: {fileID: 0}
-    - target: {fileID: 6522637854457945973, guid: 24eacedb777601f4ab9f691f96fe7351,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.77515
-      objectReference: {fileID: 0}
     - target: {fileID: 6522637854457945972, guid: 24eacedb777601f4ab9f691f96fe7351,
         type: 3}
       propertyPath: target
@@ -641,28 +626,7 @@ PrefabInstance:
       propertyPath: theMap
       value: 
       objectReference: {fileID: 2034672962}
-    - target: {fileID: 6522637854457945972, guid: 24eacedb777601f4ab9f691f96fe7351,
-        type: 3}
-      propertyPath: shouldZoomIn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6522637854457945974, guid: 24eacedb777601f4ab9f691f96fe7351,
-        type: 3}
-      propertyPath: m_Depth
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6522637854457945974, guid: 24eacedb777601f4ab9f691f96fe7351,
-        type: 3}
-      propertyPath: orthographic size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6522637854457945975, guid: 24eacedb777601f4ab9f691f96fe7351,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6522637854457945971, guid: 24eacedb777601f4ab9f691f96fe7351, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24eacedb777601f4ab9f691f96fe7351, type: 3}
 --- !u!1 &173163891
 GameObject:
@@ -11308,6 +11272,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 519140983}
+    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
+      propertyPath: fearLevelBar
+      value: 
+      objectReference: {fileID: 727341243}
     - target: {fileID: 9107673539213958610, guid: 4924ad9e89b5d814180d09d5923398bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11363,13 +11335,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
-      propertyPath: menu
-      value: 
-      objectReference: {fileID: 519140983}
-    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
-      propertyPath: fearLevelBar
-      value: 
-      objectReference: {fileID: 727341243}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
