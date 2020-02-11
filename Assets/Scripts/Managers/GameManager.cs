@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public bool canMove = true;
     public bool allMoved = true;
     public bool hasMaxFearLevelBeenReached;
+    public GameObject menuObject;
     public GameObject menu;
 
     public Floor[] floors;
@@ -109,7 +110,7 @@ public class GameManager : MonoBehaviour
 
     public void Resume()
     {
-        menu.SetActive(false);
+        menuObject.GetComponent<InGameMenu>().CloseMenu();
         gamePaused = false;
         Time.timeScale = 1;
     }

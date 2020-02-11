@@ -1882,6 +1882,8 @@ MonoBehaviour:
   - {fileID: 92288455}
   timeForMusicToFadeOut: 1
   hasPriestSpawned: 0
+  sfxVolume: 0.6
+  bgmVolume: 0.5
 --- !u!169 &1553294659
 AudioLowPassFilter:
   m_ObjectHideFlags: 0
