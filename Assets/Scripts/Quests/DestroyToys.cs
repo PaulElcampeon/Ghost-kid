@@ -10,7 +10,7 @@ public class DestroyToys : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-       if (other.gameObject.CompareTag("Possessable") && !missionSuccess)
+       if (other.gameObject.CompareTag("Possessable") && !missionSuccess && (other.gameObject.name == "TeddyBear" || other.gameObject.name == "Jet" || other.gameObject.name == "BasketBall"))
        {
             Destroy(other.gameObject);
 

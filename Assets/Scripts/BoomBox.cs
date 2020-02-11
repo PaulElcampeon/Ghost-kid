@@ -19,7 +19,7 @@ public class BoomBox : MonoBehaviour
        if(isPlayerPresent && !isAlreadyPlaying && !SoundEngine.instance.hasPriestSpawned)
         {
             isAlreadyPlaying = true;
-            track.Play();
+            SoundEngine.instance.PlayMusic(track);
         }
 
         if(!isPlayerPresent)

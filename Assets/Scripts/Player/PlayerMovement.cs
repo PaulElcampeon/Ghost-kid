@@ -14,22 +14,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (GameManager.instance.canMove && !GameManager.instance.gamePaused && !GameManager.instance.isHiding &&  !GameManager.instance.isPossessing && !GameManager.instance.gameEnded)
         {
-            if (Input.GetAxisRaw("Horizontal") == 1)
+            if (Input.GetAxisRaw("Horizontal") == 1 || InputManager.mainHorizontal() == 1)
             {
                 MoveRight();
             }
 
-            if (Input.GetAxisRaw("Horizontal") == -1)
+            if (Input.GetAxisRaw("Horizontal") == -1 || InputManager.mainHorizontal() == -1)
             {
                 MoveLeft();
             }
 
-            if (Input.GetAxisRaw("Vertical") == 1)
+            if (Input.GetAxisRaw("Vertical") == 1 || InputManager.mainVertical() == 1)
             {
                 MoveUp();
             }
            
-            if (Input.GetAxisRaw("Vertical") == -1)
+            if (Input.GetAxisRaw("Vertical") == -1 || InputManager.mainVertical() == -1)
             {
                 MoveDown();
             }
