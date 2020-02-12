@@ -8,7 +8,7 @@ public class Shocked : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<NPC>().scream.Play();
+        animator.GetComponent<NPC>().PlayScreamAudio();
         GameManager.instance.IncreaseFreakOMeter();
 
     }

@@ -172,4 +172,9 @@ public class NPC : MonoBehaviour
             GetComponent<Animator>().SetBool("isWaiting", true);
         }
     }
+
+    public void PlayScreamAudio()
+    {
+        SoundEngine.instance.PlaySFX(scream);
+    }
 }

@@ -21,6 +21,8 @@ public class SoundEngine : MonoBehaviour
     public void PlaySFX(AudioSource sfx)
     {
         sfx.volume = sfxVolume;
+        Debug.Log(sfx.volume);
+        Debug.Log(sfxVolume);
         sfx.Play();
     }
 
@@ -36,6 +38,7 @@ public class SoundEngine : MonoBehaviour
     {
         if (!hasPriestSpawned)
         {
+            audioSource.volume = 0;
             audioSource.Play();
             while (audioSource.volume < bgmVolume)
             {
@@ -58,6 +61,7 @@ public class SoundEngine : MonoBehaviour
             yield return null;
         }
 
+        audioSource.volume = 0;
         audioSource.Stop();
     }
 
