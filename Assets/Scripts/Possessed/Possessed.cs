@@ -8,20 +8,13 @@ public class Possessed : MonoBehaviour
     public bool canHide;
     public GameObject glow;
     public int size;
-    public GameObject hideableObject;
     bool hasPlayedSound;
     public AudioSource possessSfx;
     
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) {
-            if (canHide && hideableObject != null && !GameManager.instance.gamePaused && !GameManager.instance.gameEnded && GameManager.instance.isPossessing)
-            {
-                Hide();
-            } else
-            {
-                Unpossess();
-            }
+            Unpossess();
         }
 
         if(isPlayerPresent)
@@ -49,7 +42,6 @@ public class Possessed : MonoBehaviour
         }
     }
 
-
     public void ShowSlightGlow()
     {
         Color glowColor = glow.GetComponent<SpriteRenderer>().color;
@@ -66,25 +58,6 @@ public class Possessed : MonoBehaviour
     {
         Color glowColor = glow.GetComponent<SpriteRenderer>().color;
         glow.GetComponent<SpriteRenderer>().color = new Color(glowColor.r, glowColor.g, glowColor.b, 0f);
-    }
-
-    public void Hide()
-    {
-        GameManager.instance.isHiding = true;
-
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-
-        hideableObject.GetComponent<Hideable>().enabled = true;
-        hideableObject.GetComponent<Hideable>().isOccupied = true;
-        hideableObject.GetComponent<Hideable>().isGhost = false;
-        hideableObject.gameObject.GetComponent<Hideable>().possessedObj = gameObject;
-
-        canHide = false;
-
-        GetComponent<PossessableMovement>().enabled = false;
-        GetComponent<Possessed>().enabled = false;
-
-        gameObject.SetActive(false);
     }
 
     public void Unpossess()
@@ -112,32 +85,8 @@ public class Possessed : MonoBehaviour
         GetComponent<PossessableMovement>().enabled = false;
     }
 
-    public bool CollidingWithAHideableBiggerThanMe(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Hideable"))
-        {
-            return other.gameObject.GetComponent<Hideable>().size >= size;
-        }
-        return false;
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (CollidingWithAHideableBiggerThanMe(other) && isPlayerPresent)
-        {
-            canHide = true;
-            hideableObject = other.gameObject;
-        }
-    }
-
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (CollidingWithAHideableBiggerThanMe(other) && isPlayerPresent)
-        {
-            canHide = true;
-            hideableObject = other.gameObject;
-        }
-
         if (other.tag == "Priest" && GameManager.instance.isPossessing && isPlayerPresent)
         {
             Unpossess();
@@ -146,11 +95,6 @@ public class Possessed : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Hideable"))
-        {
-            canHide = false;
-            hideableObject = null;
-        }
         ShowNoGlow();
     }
 

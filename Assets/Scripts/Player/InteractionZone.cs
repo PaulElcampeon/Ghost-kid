@@ -15,12 +15,6 @@ public class InteractionZone : MonoBehaviour
 
             other.gameObject.GetComponent<Possessed>().ShowSlightGlow();
         }
-
-        if (other.gameObject.CompareTag("Hideable"))
-        {
-            Player.instance.canHide = true;
-            Player.instance.hideableObj = other.gameObject;
-        }
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -36,12 +30,6 @@ public class InteractionZone : MonoBehaviour
             {
                 other.gameObject.GetComponent<Possessed>().DisableBoomBox();
             }
-        }
-
-        if (other.gameObject.CompareTag("Hideable"))
-        {
-            Player.instance.canHide = false;
-            Player.instance.hideableObj = null;
         }
     }
 }

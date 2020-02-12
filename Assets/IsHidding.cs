@@ -17,7 +17,7 @@ public class IsHidding : StateMachineBehaviour
         delayTime -= Time.deltaTime;
         if (delayTime <= 0f)
         {
-            animator.GetComponent<Player>().Hide();
+            //animator.GetComponent<Player>().Hide();
             animator.SetBool("isHidding", false);
 
             delayTime = 1f;

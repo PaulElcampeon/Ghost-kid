@@ -13,7 +13,7 @@ public class PlayMusic : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent) || (other.gameObject.CompareTag("Hideable") && other.gameObject.GetComponent<Hideable>().isOccupied))
+        if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
         {
             Debug.Log("Player just Entered");
 
@@ -43,7 +43,7 @@ public class PlayMusic : MonoBehaviour
     {
         if (!BoomBox.instance.isAlreadyPlaying)
         {
-            if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent) || (other.gameObject.CompareTag("Hideable") && other.gameObject.GetComponent<Hideable>().isOccupied))
+            if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
             {
 
                 foreach (AudioSource track in bgmTrack)

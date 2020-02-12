@@ -102,8 +102,7 @@ public class SoundEngine : MonoBehaviour
         {
             if (source.name == "Play Sound")
             {
-                source.volume = bgmVolume;
-                source.Play();
+                PlaySFX(source);
             }
         }
     }
@@ -114,8 +113,7 @@ public class SoundEngine : MonoBehaviour
         {
             if (source.name == "Item Drop sound")
             {
-                source.volume = sfxVolume;
-                source.Play();
+                PlaySFX(source);
             }
         }
     }
