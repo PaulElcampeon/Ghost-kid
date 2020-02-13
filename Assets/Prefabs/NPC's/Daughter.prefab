@@ -117,6 +117,7 @@ MonoBehaviour:
   isWaiting: 0
   isWaitingInFear: 0
   isMissionComplete: 0
+  isTurning: 0
   missionCompleteAreaXPosition: 21.2
   scream: {fileID: 0}
   isMovingRight: 1
