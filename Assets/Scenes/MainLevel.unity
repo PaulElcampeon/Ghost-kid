@@ -466,6 +466,11 @@ PrefabInstance:
       propertyPath: theMap
       value: 
       objectReference: {fileID: 2034672962}
+    - target: {fileID: 6522637854457945975, guid: 24eacedb777601f4ab9f691f96fe7351,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24eacedb777601f4ab9f691f96fe7351, type: 3}
 --- !u!1 &173163891
@@ -1497,6 +1502,11 @@ PrefabInstance:
     - target: {fileID: 1502202121, guid: 14c5da71036c23841ad0ef3e28cdcd45, type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101216940041426882, guid: 14c5da71036c23841ad0ef3e28cdcd45,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1502202126, guid: 14c5da71036c23841ad0ef3e28cdcd45, type: 3}
@@ -8616,11 +8626,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fader
       objectReference: {fileID: 0}
-    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8827,7 +8832,7 @@ PrefabInstance:
     - target: {fileID: 3268305669905178535, guid: 501391f7519371f41928c4757fcb48c8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.7
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3268305669905178535, guid: 501391f7519371f41928c4757fcb48c8,
         type: 3}
@@ -10374,6 +10379,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
+      propertyPath: menuObject
+      value: 
+      objectReference: {fileID: 519140983}
+    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
       propertyPath: menu
       value: 
       objectReference: {fileID: 1143014922}
@@ -10381,10 +10390,6 @@ PrefabInstance:
       propertyPath: fearLevelBar
       value: 
       objectReference: {fileID: 727341243}
-    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
-      propertyPath: menuObject
-      value: 
-      objectReference: {fileID: 519140983}
     - target: {fileID: 9107673539213958610, guid: 4924ad9e89b5d814180d09d5923398bb,
         type: 3}
       propertyPath: m_LocalPosition.x

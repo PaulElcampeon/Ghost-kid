@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
 
        if (allMissionsComplete)
         {
-            //Debug.Log("All Missions Completed");
             PriestManager.instance.DeactivateAllPriests();
             StartCoroutine(FadeScreenLate());
             StartCoroutine(LoadMainMenu(15f));

@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SoundEngine.instance.PlayPlaySound();
-        //ScreenFade.instance.FadeToBlack();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

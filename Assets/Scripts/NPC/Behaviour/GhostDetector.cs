@@ -8,36 +8,33 @@ public class GhostDetector : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (AreWeCollidingWithAMovingPossessable(other))
+        if (!npc.GetComponent<NPC>().isWaitingInFear || !npc.GetComponent<NPC>().isRunningAway || !npc.GetComponent<NPC>().isTurning)
         {
-            npc.GetComponent<Animator>().SetBool("isShocked", true);
-        } else if(AreWeCollidingWithGhost(other))
-        {
-            npc.GetComponent<Animator>().SetBool("isShocked", true);
+            if (AreWeCollidingWithAMovingPossessable(other))
+            {
+                npc.GetComponent<Animator>().SetBool("isShocked", true);
+            }
+            else if (AreWeCollidingWithGhost(other))
+            {
+                npc.GetComponent<Animator>().SetBool("isShocked", true);
+            }
         }
     }
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        if (AreWeCollidingWithAMovingPossessable(other))
+        if (!npc.GetComponent<NPC>().isWaitingInFear || !npc.GetComponent<NPC>().isRunningAway || !npc.GetComponent<NPC>().isTurning)
         {
-            //CURRENTLY WE ARE NOT CHECKING SOUND SO THIS CODE IS REDUNDANT
-            //Check if we are inspecting a sound and if so cancel it
-            /*if (npc.GetComponent<NPC>().isInspectingSound)
+            if (AreWeCollidingWithAMovingPossessable(other))
             {
-                npc.GetComponent<NPC>().CancelInspectingSound();
-            }*/
-            npc.GetComponent<NPC>().isRunningAway = true;
-            npc.GetComponent<Animator>().SetBool("isShocked", true);
-        } else if (AreWeCollidingWithGhost(other))
-        {
-            //CURRENTLY WE ARE NOT CHECKING SOUND SO THIS CODE IS REDUNDANT
-            /*if (npc.GetComponent<NPC>().isInspectingSound)
+                npc.GetComponent<NPC>().isRunningAway = true;
+                npc.GetComponent<Animator>().SetBool("isShocked", true);
+            }
+            else if (AreWeCollidingWithGhost(other))
             {
-                npc.GetComponent<NPC>().CancelInspectingSound();
-            }*/
-            npc.GetComponent<NPC>().isRunningAway = true;
-            npc.GetComponent<Animator>().SetBool("isShocked", true);
+                npc.GetComponent<NPC>().isRunningAway = true;
+                npc.GetComponent<Animator>().SetBool("isShocked", true);
+            }
         }
     }
 
