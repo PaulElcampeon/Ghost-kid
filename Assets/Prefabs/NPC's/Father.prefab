@@ -181,6 +181,9 @@ MonoBehaviour:
   startedAllMissionsCompleteAnimation: 0
   minXPosition: -5.5
   maxXPosition: 21
+  missionCompleteZone:
+    minXpos: 13.5
+    maxXPos: 14.5
   heartParticles: {fileID: 152565061354602799}
 --- !u!212 &5160566712256713930
 SpriteRenderer:

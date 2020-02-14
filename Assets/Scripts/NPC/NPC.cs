@@ -26,6 +26,8 @@ public class NPC : MonoBehaviour
     public float minXPosition;
     public float maxXPosition;
 
+    public MissionCompleteZone missionCompleteZone;
+
     public GameObject heartParticles;
 
     void Start()

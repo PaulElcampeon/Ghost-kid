@@ -4,12 +4,27 @@ using UnityEngine;
 
 public class WalkToAPoint : StateMachineBehaviour
 {
+    private float minXPos;
+    private float maxXPos;
+    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        minXPos = animator.GetComponent<NPC>().missionCompleteZone.minXpos;
+        maxXPos = animator.GetComponent<NPC>().missionCompleteZone.maxXPos;
+    }
 
+    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isWaitingInFear", false);
+        animator.SetBool("isWaiting", false);
+        animator.SetBool("isRunning", false);
+        animator.ResetTrigger("turn");
 
-        float xPos = animator.GetComponent<NPC>().missionCompleteAreaXPosition;
-        if (xPos > animator.GetComponent<Rigidbody2D>().transform.position.x)
+        float npcXPos = animator.GetComponent<Rigidbody2D>().transform.position.x;
+
+        if (minXPos > npcXPos)
         {
             if(!animator.GetComponent<NPC>().isMovingRight)
             {
@@ -24,10 +39,11 @@ public class WalkToAPoint : StateMachineBehaviour
                 animator.GetComponent<NPC>().Flip();
             }
         }
-        animator.GetComponent<NPC>().MoveToPositionWalking(new Vector3(xPos, animator.GetComponent<NPC>().transform.position.y, animator.GetComponent<NPC>().transform.position.z));
+        animator.GetComponent<NPC>().MoveToPositionWalking(new Vector3(minXPos, animator.GetComponent<NPC>().transform.position.y, animator.GetComponent<NPC>().transform.position.z));
 
-        if(animator.GetComponent<Rigidbody2D>().transform.position.x == xPos)
+        if(npcXPos >= minXPos && npcXPos <= maxXPos)
         {
+            animator.GetComponent<NPC>().heartParticles.SetActive(true);
             animator.SetBool("waitngForGameToEnd", true);
         }
     }

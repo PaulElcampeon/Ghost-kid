@@ -20,6 +20,11 @@ public class Daughter : MonoBehaviour
 
                 if (missionCompleted)
                 {
+                    GetComponent<Animator>().SetBool("isWaitingInFear", false);
+                    GetComponent<Animator>().SetBool("isWaiting", false);
+                    GetComponent<Animator>().SetBool("isWalking", false);
+                    GetComponent<Animator>().ResetTrigger("turn");
+
                     GetComponent<Animator>().SetBool("missionComplete", true);
                 }
             }
