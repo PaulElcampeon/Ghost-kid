@@ -13,7 +13,7 @@ public class Possessed : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (InputManager.ActionButton()) {
             Unpossess();
         }
 

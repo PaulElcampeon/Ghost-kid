@@ -149,7 +149,7 @@ MonoBehaviour:
   canHide: 0
   glow: {fileID: 7837151124801876878}
   size: 0
-  hideableObject: {fileID: 0}
+  possessSfx: {fileID: 0}
 --- !u!114 &7837151124704508348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1d3e3e9b7848344bd29bf4b308b519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   isMovingRight: 0
   isMovingUp: 0
   isMoving: 0

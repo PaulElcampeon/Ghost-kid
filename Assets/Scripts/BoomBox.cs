@@ -6,11 +6,17 @@ public class BoomBox : MonoBehaviour
 {
     public bool isPlayerPresent;
     public AudioSource track;
+    public AudioClip[] audioClipArray;
     public bool isAlreadyPlaying;
     public static BoomBox instance;
 
+    public void Awake()
+    {
+        
+    }
     public void Start()
     {
+        
         instance = this;
     }
 
@@ -18,6 +24,7 @@ public class BoomBox : MonoBehaviour
     {
        if(isPlayerPresent && !isAlreadyPlaying && !SoundEngine.instance.hasPriestSpawned)
         {
+            track.clip = audioClipArray[Random.Range (0, audioClipArray.Length - 1)];
             isAlreadyPlaying = true;
             SoundEngine.instance.PlayMusic(track);
         }

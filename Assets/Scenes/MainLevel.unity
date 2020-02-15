@@ -8361,9 +8361,25 @@ PrefabInstance:
       value: 3.8250003
       objectReference: {fileID: 0}
     - target: {fileID: 995026165, guid: f93ed56b367321c42b75b05efdf459dc, type: 3}
+      propertyPath: audioClipArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 995026165, guid: f93ed56b367321c42b75b05efdf459dc, type: 3}
       propertyPath: track
       value: 
       objectReference: {fileID: 502370763}
+    - target: {fileID: 995026165, guid: f93ed56b367321c42b75b05efdf459dc, type: 3}
+      propertyPath: audioClipArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ecfb8aaba68c8d4cbfc576713aa0926, type: 3}
+    - target: {fileID: 995026165, guid: f93ed56b367321c42b75b05efdf459dc, type: 3}
+      propertyPath: audioClipArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: fbbae9aa30308d7488909a5d1dd791b6, type: 3}
+    - target: {fileID: 995026165, guid: f93ed56b367321c42b75b05efdf459dc, type: 3}
+      propertyPath: audioClipArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: da8599e755f7b0c42a12b02ec7588169, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f93ed56b367321c42b75b05efdf459dc, type: 3}
 --- !u!1001 &2592532589760704512
@@ -8620,6 +8636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fader
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}

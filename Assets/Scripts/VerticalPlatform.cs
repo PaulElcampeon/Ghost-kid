@@ -17,13 +17,13 @@ public class VerticalPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            waitTime = 0.5f;
-        }
+        // if (Input.GetKeyUp(KeyCode.S))
+        //{
+        //     waitTime = 0.5f;
+        // }//
+      
 
-
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || InputManager.mainVertical() == -1)
         {
             if (waitTime <= 0)
             {
@@ -36,7 +36,7 @@ public class VerticalPlatform : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || InputManager.mainVertical() == 1)
         {
             effector.rotationalOffset = 0;
         }

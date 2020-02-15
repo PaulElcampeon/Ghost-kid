@@ -7,7 +7,7 @@ public static class InputManager // I don't want to instantiate this every scene
    public static bool ActionButton ()
     {
         
-        return Input.GetButtonDown("Action_Button");
+        return Input.GetButtonDown("Action_Button_Xbox");
     }
 
    public static bool PauseButton()
