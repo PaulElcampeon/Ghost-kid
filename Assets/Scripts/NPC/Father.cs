@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Father : MonoBehaviour
+public class Father : NPC
 {
     public DestroyToys mission;
     public bool missionCompleted;
     public int floorId;
 
-    void Update()
+    public override void LateUpdate()
     {
+        base.LateUpdate();
+
         if (!missionCompleted)
         {
             if (mission.missionSuccess)

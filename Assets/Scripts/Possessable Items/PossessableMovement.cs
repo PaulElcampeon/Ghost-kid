@@ -11,7 +11,7 @@ public class PossessableMovement : MonoBehaviour
     public bool isMovingUp;
     public bool isMoving;
 
-    void Update()
+    void FixedUpdate()
     {
         if (GameManager.instance.canMove && !GameManager.instance.gamePaused && !GameManager.instance.isHiding && !GameManager.instance.gameEnded)
         {

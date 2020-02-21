@@ -66,7 +66,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3268305669905178535}
-  - component: {fileID: 6730396746112732216}
   - component: {fileID: 2199581835187661014}
   - component: {fileID: 1198375575500827996}
   - component: {fileID: 4066774317052469233}
@@ -97,37 +96,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6730396746112732216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782686768383965304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2f56879ef5f97c43af4f70233e91b81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rgb: {fileID: 1198375575500827996}
-  runSpeed: 6
-  walkSpeed: 3
-  waitFor: 2
-  isRunningAway: 0
-  isWaiting: 0
-  isWaitingInFear: 0
-  isMissionComplete: 0
-  isTurning: 0
-  missionCompleteAreaXPosition: 26.7
-  scream: {fileID: 0}
-  isMovingRight: 1
-  startedAllMissionsCompleteAnimation: 0
-  minXPosition: -5.5
-  maxXPosition: 21
-  missionCompleteZone:
-    minXpos: 26
-    maxXPos: 27.3
-  heartParticles: {fileID: 8160897597438615431}
 --- !u!212 &2199581835187661014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -229,6 +197,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4d4a8b9e35cb54fba06aa9debe5d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runSpeed: 5
+  walkSpeed: 3
+  waitFor: 0
+  isRunningAway: 0
+  isWaiting: 0
+  isWaitingInFear: 0
+  isMissionComplete: 0
+  isTurning: 0
+  missionCompleteAreaXPosition: 25
+  scream: {fileID: 0}
+  isMovingRight: 0
+  startedAllMissionsCompleteAnimation: 0
+  minXPosition: -5.4
+  maxXPosition: 21
+  missionCompleteZone:
+    minXpos: 24.6
+    maxXPos: 25.3
+  heartParticles: {fileID: 8160897597438615431}
   mission: {fileID: 0}
   missionCompleted: 0
   floorId: 0
