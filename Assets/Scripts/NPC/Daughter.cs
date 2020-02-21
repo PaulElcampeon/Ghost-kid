@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Daughter : MonoBehaviour
+public class Daughter : NPC
 {
     public OpenDrawer mission;
     public bool missionCompleted;
     public int floorId;
 
-    void Update()
+    public override void LateUpdate()
     {
+        base.LateUpdate();
+
         if (!missionCompleted)
         {
             if (mission.missionSuccess)

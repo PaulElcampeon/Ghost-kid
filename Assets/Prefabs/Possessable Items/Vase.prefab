@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7837151124704508295}
   - component: {fileID: 7837151124704508345}
   - component: {fileID: 7837151124704508346}
-  - component: {fileID: 7837151124704508347}
   - component: {fileID: 7837151124704508348}
   - component: {fileID: 7837151124704508349}
+  - component: {fileID: 1015896003}
   m_Layer: 9
   m_Name: Vase
   m_TagString: Possessable
@@ -133,23 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0629478, y: 2.213562}
   m_EdgeRadius: 0
---- !u!114 &7837151124704508347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7837151124704508350}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5ad5ecf4de95849a82188b615732a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayerPresent: 0
-  canHide: 0
-  glow: {fileID: 7837151124801876878}
-  size: 0
-  hideableObject: {fileID: 0}
 --- !u!114 &7837151124704508348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1d3e3e9b7848344bd29bf4b308b519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   isMovingRight: 0
   isMovingUp: 0
   isMoving: 0
@@ -192,6 +175,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9059841, y: 2.5996184}
   m_EdgeRadius: 0
+--- !u!114 &1015896003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7837151124704508350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5add4b030f78d846939bffa19e7e8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerPresent: 0
+  canHide: 0
+  glow: {fileID: 7837151124801876878}
+  size: 0
+  hasPlayedSound: 0
+  possessSfx: {fileID: 0}
 --- !u!1 &7837151124801876878
 GameObject:
   m_ObjectHideFlags: 0

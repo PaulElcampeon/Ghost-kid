@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public abstract class NPC : MonoBehaviour
 {
-    public Rigidbody2D rgb;
+    private Rigidbody2D rgb;
 
-    public float runSpeed;
-    public float walkSpeed;
-    public float waitFor;
+    [SerializeField]
+    protected float runSpeed;
+    [SerializeField]
+    protected float walkSpeed;
+    [SerializeField]
+    protected float waitFor;
 
     public bool isRunningAway;
     public bool isWaiting;
@@ -33,9 +36,10 @@ public class NPC : MonoBehaviour
     void Start()
     {
         isMovingRight = false;
+        rgb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    public void LateUpdate()
+    public virtual void LateUpdate()
     {
        if(GameManager.instance.allMissionsComplete && GetComponent<Rigidbody2D>().transform.position.x != missionCompleteAreaXPosition && !startedAllMissionsCompleteAnimation) 
         {

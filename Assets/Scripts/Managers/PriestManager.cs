@@ -25,7 +25,6 @@ public class PriestManager : MonoBehaviour
         int randomFloor = availableFloors[Random.Range(0, availableFloors.Count)];
         GivePriestSpawnPoint(priests[randomFloor]);
         priests[randomFloor].SetActive(true);
-        Debug.Log("Spawning Priest");
     }
 
     public List<int> GetAllAvailableFloors()

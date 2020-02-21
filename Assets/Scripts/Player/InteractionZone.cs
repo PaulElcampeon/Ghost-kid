@@ -12,7 +12,6 @@ public class InteractionZone : MonoBehaviour
         {
             Player.instance.canPossess = true;
             Player.instance.possesableObj = other.gameObject;
-
             other.gameObject.GetComponent<Possessed>().ShowSlightGlow();
         }
     }
@@ -25,11 +24,6 @@ public class InteractionZone : MonoBehaviour
             Player.instance.possesableObj = null;
 
             other.gameObject.GetComponent<Possessed>().ShowNoGlow();
-
-            if (other.gameObject.GetComponent<Possessed>().isBoomBox())
-            {
-                other.gameObject.GetComponent<Possessed>().DisableBoomBox();
-            }
         }
     }
 }

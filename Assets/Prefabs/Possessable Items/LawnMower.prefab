@@ -92,10 +92,10 @@ GameObject:
   - component: {fileID: 8653702950613041503}
   - component: {fileID: 8653702950613041501}
   - component: {fileID: 8653702950613041474}
-  - component: {fileID: 8653702950613041475}
   - component: {fileID: 8653702950613041478}
   - component: {fileID: 8653702950613041472}
   - component: {fileID: 8653702950613041473}
+  - component: {fileID: 2108670981}
   m_Layer: 9
   m_Name: LawnMower
   m_TagString: Possessable
@@ -214,24 +214,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5072255, y: 1.1206169}
   m_EdgeRadius: 0
---- !u!114 &8653702950613041475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8653702950613041479}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5ad5ecf4de95849a82188b615732a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayerPresent: 0
-  canHide: 0
-  glow: {fileID: 8653702948636319512}
-  size: 0
-  hideableObject: {fileID: 0}
-  possessSfx: {fileID: 0}
 --- !u!114 &8653702950613041478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,3 +270,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.2650337, y: 1.1750529}
   m_EdgeRadius: 0
+--- !u!114 &2108670981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653702950613041479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5add4b030f78d846939bffa19e7e8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerPresent: 0
+  canHide: 0
+  glow: {fileID: 8653702948636319512}
+  size: 0
+  hasPlayedSound: 0
+  possessSfx: {fileID: 0}

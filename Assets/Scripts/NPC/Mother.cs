@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mother : MonoBehaviour
+public class Mother : NPC
 {
     public LawnmowerMission mission;
     public bool missionCompleted;
     public int floorId;
 
-    void Update()
+    public override void LateUpdate()
     {
+        base.LateUpdate();
+
         if (!missionCompleted)
         {
             if (mission.missionSuccess)
