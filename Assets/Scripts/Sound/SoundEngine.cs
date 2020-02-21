@@ -21,8 +21,6 @@ public class SoundEngine : MonoBehaviour
     public void PlaySFX(AudioSource sfx)
     {
         sfx.volume = sfxVolume;
-        Debug.Log(sfx.volume);
-        Debug.Log(sfxVolume);
         sfx.Play();
     }
 
@@ -43,7 +41,6 @@ public class SoundEngine : MonoBehaviour
             while (audioSource.volume < bgmVolume)
             {
                 audioSource.volume += Time.deltaTime / FadeTime;
-                Debug.Log("Still trying to fade in " + audioSource.name);
                 yield return null;
             }
         }
@@ -56,8 +53,6 @@ public class SoundEngine : MonoBehaviour
         while (audioSource.volume > 0)
         {
             audioSource.volume -= startVolume * Time.deltaTime / timeForMusicToFadeOut;
-            Debug.Log("Still trying to fade out " + audioSource.name);
-
             yield return null;
         }
 
@@ -67,7 +62,7 @@ public class SoundEngine : MonoBehaviour
 
     public void PlayPriestMusic(AudioSource[] music, float fadeIn, float maxVolume)
     {
-        StopAllMusic();//Stop music that is already playing
+        StopAllMusic();
         StartCoroutine(FadeIn(music[0], fadeIn, maxVolume));
         hasPriestSpawned = true;
     }
@@ -124,8 +119,8 @@ public class SoundEngine : MonoBehaviour
         music.Play();
     }
 
-    //This means that when we update the sound volume it wont change the current musics volume until the player goes to another floor
-    //The sound effects shoudl take immediate effect as we set the volume when the effect is about to be played
+    //This means that when we update the sound volume it will result in the current music volume not being updated until the player goes to another floor and a new peice of music begins to play with the new volume setting
+    //The sound effects should take immediate effect as we set the volume when the effect is about to be played
     public void UpdateSoundVolume( float sfxVolume, float bgmVolume)
     {
         SoundEngine.instance.sfxVolume = sfxVolume;

@@ -14,9 +14,11 @@ public class Priest : MonoBehaviour
  
     public void MoveBetweenMaxAndMinPositions()
     {
+         Vector2 newPosition;
+
         if (isMovingRight)
         {
-            Vector2 newPosition = Vector2.MoveTowards(rgb.position, new Vector2(maxXPosition, rgb.position.y), walkSpeed * Time.deltaTime);
+            newPosition = Vector2.MoveTowards(rgb.position, new Vector2(maxXPosition, rgb.position.y), walkSpeed * Time.deltaTime);
             rgb.MovePosition(newPosition);
 
             if (newPosition.x == maxXPosition)
@@ -27,7 +29,7 @@ public class Priest : MonoBehaviour
         }
         else
         {
-            Vector2 newPosition = Vector2.MoveTowards(rgb.position, new Vector2(minXPosition, rgb.position.y), walkSpeed * Time.deltaTime);
+            newPosition = Vector2.MoveTowards(rgb.position, new Vector2(minXPosition, rgb.position.y), walkSpeed * Time.deltaTime);
             rgb.MovePosition(newPosition);
 
             if (newPosition.x == minXPosition)

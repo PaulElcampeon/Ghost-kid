@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.E) && !GameManager.instance.gameEnded && !GameManager.instance.gamePaused && !GameManager.instance.isPossessing)
         {
             if (canPossess && possesableObj != null)
@@ -36,8 +35,8 @@ public class Player : MonoBehaviour
     public void Possess()
     {
         possesableObj.GetComponent<PossessableMovement>().enabled = true;
-        possesableObj.GetComponent<Possessed>().enabled = true;
-        possesableObj.GetComponent<Possessed>().isPlayerPresent = true;
+        //possesableObj.GetComponent<Possessed>().enabled = true;
+        //possesableObj.GetComponent<Possessed>().isPlayerPresent = true;
 
         CameraController.instance.target = possesableObj.GetComponent<Rigidbody2D>().transform;
 
@@ -45,6 +44,8 @@ public class Player : MonoBehaviour
         We could disbale the player and playerMovement script but they will get disabled when we the gameObject active to false
          * */
         canPossess = false;
+        possesableObj.GetComponent<Possessed>().Possess();
         gameObject.SetActive(false);
+
     }
 }

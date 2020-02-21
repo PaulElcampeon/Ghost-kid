@@ -15,8 +15,6 @@ public class PlayMusic : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
         {
-            Debug.Log("Player just Entered");
-
             if (coroutines.Count > 0)
             {
                 foreach (Coroutine routine in coroutines)
@@ -43,6 +41,7 @@ public class PlayMusic : MonoBehaviour
     {
         if (!BoomBox.instance.isAlreadyPlaying)
         {
+            //Debug.Log(other.gameObject.GetComponent<Possessed>() != null);
             if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
             {
 
@@ -80,7 +79,6 @@ public class PlayMusic : MonoBehaviour
     {
         if (!GetComponent<BoxCollider2D>().bounds.Contains(Player.instance.transform.position))
         {
-            Debug.Log("Player just exited");
             isMusicPlaying = false;
             stayed = false;
 

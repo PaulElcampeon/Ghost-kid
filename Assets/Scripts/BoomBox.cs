@@ -2,29 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoomBox : MonoBehaviour
+public class BoomBox : Possessed
 {
-    public bool isPlayerPresent;
+    //public bool isPlayerPresent;
     public AudioSource track;
     public AudioClip[] audioClipArray;
     public bool isAlreadyPlaying;
     public static BoomBox instance;
 
-    public void Awake()
-    {
-        
-    }
     public void Start()
     {
-        
         instance = this;
     }
 
-    void Update()
+    public override void Update()
     {
+        base.Update();
+        
        if(isPlayerPresent && !isAlreadyPlaying && !SoundEngine.instance.hasPriestSpawned)
         {
-            track.clip = audioClipArray[Random.Range (0, audioClipArray.Length - 1)];
+            track.clip = audioClipArray[Random.Range (0, audioClipArray.Length)];
             isAlreadyPlaying = true;
             SoundEngine.instance.PlayMusic(track);
         }

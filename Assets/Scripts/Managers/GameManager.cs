@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour
 
             }
             UpdateFreakOMeter();
-            Debug.Log("Increased Freak O Meter");
         }
     }
 
@@ -92,7 +91,6 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateFreakOMeter();
-        Debug.Log("Decreased Freak O Meter");
     }
 
     public void UpdateFreakOMeter()
@@ -116,6 +114,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
 

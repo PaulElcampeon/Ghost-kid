@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Possessed : MonoBehaviour
+public abstract class Possessed : MonoBehaviour
 {
     public bool isPlayerPresent;
     public bool canHide;
     public GameObject glow;
     public int size;
-    bool hasPlayedSound;
+    public bool hasPlayedSound;
     public AudioSource possessSfx;
     
-    void Update()
+    public virtual void Update()
     {
         if (InputManager.ActionButton()) {
             Unpossess();
@@ -22,15 +22,15 @@ public class Possessed : MonoBehaviour
             PlayItemSoundOnce();
             ShowFullGlow();
             
-            if(isBoomBox())
+            /*f(IsBoomBox())
             {
                 PlayBoomBox();
-            }
+            }*/
 
-        } else
+        } /*else
         {
             ShowNoGlow();
-        }
+        }*/
     }
 
     public void PlayItemSoundOnce()
@@ -62,27 +62,31 @@ public class Possessed : MonoBehaviour
 
     public void Unpossess()
     {
-
-        if (isBoomBox())
+        if (isPlayerPresent)
         {
-            DisableBoomBox();
+            Debug.Log("We are unpossessing");
+
+            /*if (IsBoomBox())
+            {
+                DisableBoomBox();
+            }*/
+            GameManager.instance.isPossessing = false;
+
+            Player.instance.transform.position = transform.position;
+            Player.instance.possesableObj = null;
+            Player.instance.canPossess = false;
+            Player.instance.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            Player.instance.GetComponent<SpriteRenderer>().enabled = false;
+            Player.instance.gameObject.SetActive(true);
+            Player.instance.GetComponent<Animator>().SetBool("outOfObject", true);
+
+            CameraController.instance.target = Player.instance.transform;
+
+            isPlayerPresent = false;
+
+            GetComponent<PossessableMovement>().enabled = false;
+            ShowNoGlow();
         }
-        GameManager.instance.isPossessing = false;
-
-        Player.instance.transform.position = transform.position;
-        Player.instance.possesableObj = null;
-        Player.instance.canPossess = false;
-        Player.instance.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        Player.instance.GetComponent<SpriteRenderer>().enabled = false;
-        Player.instance.gameObject.SetActive(true);
-        Player.instance.GetComponent<Animator>().SetBool("outOfObject", true);
-
-       CameraController.instance.target = Player.instance.transform;
-
-        isPlayerPresent = false;
-
-        GetComponent<Possessed>().enabled = false;
-        GetComponent<PossessableMovement>().enabled = false;
     }
 
     public void OnTriggerStay2D(Collider2D other)
@@ -98,7 +102,7 @@ public class Possessed : MonoBehaviour
         ShowNoGlow();
     }
 
-    public bool isBoomBox()
+    /*public bool IsBoomBox()
     {
         return gameObject.name == "BoomBox";
     }
@@ -111,5 +115,10 @@ public class Possessed : MonoBehaviour
     public void DisableBoomBox()
     {
         GetComponent<BoomBox>().isPlayerPresent = false;
+    }*/
+
+    public void Possess()
+    {
+        isPlayerPresent = true;
     }
 }

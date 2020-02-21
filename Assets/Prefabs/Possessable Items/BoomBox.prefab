@@ -119,7 +119,6 @@ MonoBehaviour:
   canHide: 0
   glow: {fileID: 2531691920132737229}
   size: 0
-  hideableObject: {fileID: 0}
   possessSfx: {fileID: 0}
 --- !u!50 &2531691919754406870
 Rigidbody2D:
@@ -208,6 +207,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerPresent: 0
   track: {fileID: 0}
+  audioClipArray:
+  - {fileID: 8300000, guid: 6ecfb8aaba68c8d4cbfc576713aa0926, type: 3}
+  - {fileID: 8300000, guid: fbbae9aa30308d7488909a5d1dd791b6, type: 3}
+  - {fileID: 8300000, guid: da8599e755f7b0c42a12b02ec7588169, type: 3}
   isAlreadyPlaying: 0
 --- !u!1 &2531691920132737229
 GameObject:
