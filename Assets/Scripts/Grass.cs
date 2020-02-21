@@ -17,7 +17,6 @@ public class Grass : MonoBehaviour
     {
         if (collision.gameObject.name == "LawnMower" && lawnmower.isGassed)
         {
-            Debug.Log("Grass cut");
             longGrassSprite.enabled = false;
         }
     }

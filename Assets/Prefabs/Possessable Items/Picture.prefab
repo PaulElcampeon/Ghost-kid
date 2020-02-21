@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 347447848222200685}
   - component: {fileID: 347447848222200682}
-  - component: {fileID: 347447848222200687}
   - component: {fileID: 347447848222200684}
   - component: {fileID: 347447848222200686}
   - component: {fileID: 347447848222200657}
   - component: {fileID: 347447848222200656}
+  - component: {fileID: 669627788}
   m_Layer: 9
   m_Name: Picture
   m_TagString: Possessable
@@ -86,23 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &347447848222200687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347447848222200683}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5ad5ecf4de95849a82188b615732a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayerPresent: 0
-  canHide: 0
-  glow: {fileID: 347447848408179049}
-  size: 0
-  hideableObject: {fileID: 0}
 --- !u!114 &347447848222200684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +175,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.81438255, y: 1.3182182}
   m_EdgeRadius: 0
+--- !u!114 &669627788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347447848222200683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5add4b030f78d846939bffa19e7e8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerPresent: 0
+  canHide: 0
+  glow: {fileID: 347447848408179049}
+  size: 0
+  hasPlayedSound: 0
+  possessSfx: {fileID: 0}
 --- !u!1 &347447848408179049
 GameObject:
   m_ObjectHideFlags: 0

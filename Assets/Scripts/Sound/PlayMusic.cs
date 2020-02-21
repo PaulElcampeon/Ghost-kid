@@ -41,7 +41,6 @@ public class PlayMusic : MonoBehaviour
     {
         if (!BoomBox.instance.isAlreadyPlaying)
         {
-            //Debug.Log(other.gameObject.GetComponent<Possessed>() != null);
             if (other.gameObject.CompareTag("Music Detection") || (other.gameObject.CompareTag("Possessable") && other.gameObject.GetComponent<Possessed>().isPlayerPresent))
             {
 

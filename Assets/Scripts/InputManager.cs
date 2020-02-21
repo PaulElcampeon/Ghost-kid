@@ -33,7 +33,4 @@ public static class InputManager // I don't want to instantiate this every scene
         r += Input.GetAxis("MainVertical_Keyboard");
         return Mathf.Clamp(r, -1f, 1f);
     }
-
-
-
 }

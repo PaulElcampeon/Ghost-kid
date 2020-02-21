@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    //[Header("Item Type")]//do something with this
     public float fearLevel;
     public float fearLevelMax;
     public bool gameEnded;
@@ -53,8 +52,6 @@ public class GameManager : MonoBehaviour
        {
             //We do this so that the code in this block only gets executed once
             isDead = false;
-
-            Debug.Log("You are dead");
             StartCoroutine(LoadMainMenu(5f));
             ScreenFade.instance.FadeToBlack();
        }
@@ -120,7 +117,6 @@ public class GameManager : MonoBehaviour
 
     public void CompleteAMission(int floorId)
     {
-        Debug.Log("Someone just completed a mission");
         foreach(Floor floor in floors)
         {
             if(floor.floorId == floorId)

@@ -21,16 +21,7 @@ public abstract class Possessed : MonoBehaviour
         {
             PlayItemSoundOnce();
             ShowFullGlow();
-            
-            /*f(IsBoomBox())
-            {
-                PlayBoomBox();
-            }*/
-
-        } /*else
-        {
-            ShowNoGlow();
-        }*/
+        }
     }
 
     public void PlayItemSoundOnce()
@@ -64,12 +55,6 @@ public abstract class Possessed : MonoBehaviour
     {
         if (isPlayerPresent)
         {
-            Debug.Log("We are unpossessing");
-
-            /*if (IsBoomBox())
-            {
-                DisableBoomBox();
-            }*/
             GameManager.instance.isPossessing = false;
 
             Player.instance.transform.position = transform.position;
@@ -101,21 +86,6 @@ public abstract class Possessed : MonoBehaviour
     {
         ShowNoGlow();
     }
-
-    /*public bool IsBoomBox()
-    {
-        return gameObject.name == "BoomBox";
-    }
-
-    public void PlayBoomBox()
-    {
-        GetComponent<BoomBox>().isPlayerPresent = true;
-    }
-
-    public void DisableBoomBox()
-    {
-        GetComponent<BoomBox>().isPlayerPresent = false;
-    }*/
 
     public void Possess()
     {

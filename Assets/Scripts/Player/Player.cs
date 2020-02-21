@@ -35,9 +35,6 @@ public class Player : MonoBehaviour
     public void Possess()
     {
         possesableObj.GetComponent<PossessableMovement>().enabled = true;
-        //possesableObj.GetComponent<Possessed>().enabled = true;
-        //possesableObj.GetComponent<Possessed>().isPlayerPresent = true;
-
         CameraController.instance.target = possesableObj.GetComponent<Rigidbody2D>().transform;
 
         /*

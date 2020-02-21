@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2531691919754406869}
   - component: {fileID: 2531691919754406866}
   - component: {fileID: 2531691919754406871}
-  - component: {fileID: 2531691919754406868}
   - component: {fileID: 2531691919754406870}
   - component: {fileID: 2531691919754406857}
   - component: {fileID: 2531691919754406856}
@@ -103,23 +102,6 @@ MonoBehaviour:
   isMovingRight: 0
   isMovingUp: 0
   isMoving: 0
---- !u!114 &2531691919754406868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2531691919754406867}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5ad5ecf4de95849a82188b615732a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayerPresent: 0
-  canHide: 0
-  glow: {fileID: 2531691920132737229}
-  size: 0
-  possessSfx: {fileID: 0}
 --- !u!50 &2531691919754406870
 Rigidbody2D:
   serializedVersion: 4
@@ -206,6 +188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerPresent: 0
+  canHide: 0
+  glow: {fileID: 2531691920132737229}
+  size: 0
+  hasPlayedSound: 0
+  possessSfx: {fileID: 0}
   track: {fileID: 0}
   audioClipArray:
   - {fileID: 8300000, guid: 6ecfb8aaba68c8d4cbfc576713aa0926, type: 3}

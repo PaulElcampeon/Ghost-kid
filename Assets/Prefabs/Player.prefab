@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &500277860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500277861}
+  - component: {fileID: 500277862}
+  m_Layer: 8
+  m_Name: Music Detection
+  m_TagString: Music Detection
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &500277861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500277860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6101216940041426883}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &500277862
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500277860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.17920727, y: 0.26358262}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3584144, y: 1.80832}
+  m_EdgeRadius: 0
 --- !u!1 &6101216940041426884
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +72,6 @@ GameObject:
   - component: {fileID: 1464358379}
   - component: {fileID: 6926124499408664896}
   - component: {fileID: 1502202121}
-  - component: {fileID: 1502202126}
   - component: {fileID: 792129484}
   - component: {fileID: 792129483}
   m_Layer: 8
@@ -37,6 +93,7 @@ Transform:
   m_LocalScale: {x: 0.978065, y: 0.9965191, z: 0.7381623}
   m_Children:
   - {fileID: 6101216941030667900}
+  - {fileID: 500277861}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,10 +158,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.62424403
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -123,9 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPossess: 0
-  canHide: 0
   possesableObj: {fileID: 0}
-  hideableObj: {fileID: 0}
   animator: {fileID: 6926124499408664896}
   playerStartingPoint: {x: -4.06, y: 2.23, z: 0}
 --- !u!70 &1464358379
@@ -175,22 +230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d283a383f040f4ebc0f9dad203cd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   isMovingRight: 0
   isMovingUp: 0
---- !u!114 &1502202126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6101216940041426884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 311826df03d7cba49b169bf7872f9e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound: {fileID: 0}
 --- !u!61 &792129484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -201,10 +243,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.19286871, y: 0.5576009}
+  m_Offset: {x: -0.19286871, y: 0.4521675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -215,7 +257,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7947502, y: 2.2931776}
+  m_Size: {x: 1.7947502, y: 2.3634672}
   m_EdgeRadius: 0
 --- !u!82 &792129483
 AudioSource:
@@ -237,7 +279,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.8248892
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -358,7 +400,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.9806895, y: 0.22440684}
+  m_Offset: {x: 0.6364117, y: 0.22440684}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -369,7 +411,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3210621, y: 2.0965898}
+  m_Size: {x: 1.0096177, y: 2.0965898}
   m_EdgeRadius: 0
 --- !u!114 &6101216941030667898
 MonoBehaviour:

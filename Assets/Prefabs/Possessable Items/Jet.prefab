@@ -92,12 +92,12 @@ GameObject:
   - component: {fileID: 6139197021178187063}
   - component: {fileID: 6139197021178187061}
   - component: {fileID: 6139197021178187210}
-  - component: {fileID: 6139197021178187211}
   - component: {fileID: 6139197021178187208}
   - component: {fileID: 6139197021178187209}
+  - component: {fileID: 1364601123}
   m_Layer: 9
   m_Name: Jet
-  m_TagString: toys
+  m_TagString: Possessable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,23 +213,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0629478, y: 0.7547063}
   m_EdgeRadius: 0
---- !u!114 &6139197021178187211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6139197021178187214}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5ad5ecf4de95849a82188b615732a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayerPresent: 0
-  canHide: 0
-  glow: {fileID: 6139197020974247817}
-  size: 0
-  hideableObject: {fileID: 0}
 --- !u!61 &6139197021178187208
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -272,3 +255,21 @@ MonoBehaviour:
   isMovingRight: 0
   isMovingUp: 0
   isMoving: 0
+--- !u!114 &1364601123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6139197021178187214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5add4b030f78d846939bffa19e7e8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerPresent: 0
+  canHide: 0
+  glow: {fileID: 6139197020974247817}
+  size: 0
+  hasPlayedSound: 0
+  possessSfx: {fileID: 0}
