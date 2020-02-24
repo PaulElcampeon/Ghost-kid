@@ -1484,31 +1484,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6101216940041426882, guid: 14c5da71036c23841ad0ef3e28cdcd45,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c5da71036c23841ad0ef3e28cdcd45, type: 3}
---- !u!1 &452225476 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6101216940041426884, guid: 14c5da71036c23841ad0ef3e28cdcd45,
-    type: 3}
-  m_PrefabInstance: {fileID: 452225475}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &452225477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452225476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e517c1097c8c1b34588d49e1552815bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &453712286 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 453712286, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
@@ -9194,11 +9171,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fader
-      objectReference: {fileID: 0}
-    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}
