@@ -70,7 +70,6 @@ public abstract class Possessed : MonoBehaviour
             isPlayerPresent = false;
 
             GetComponent<PossessableMovement>().enabled = false;
-            ShowNoGlow();
         }
     }
 
@@ -84,7 +83,10 @@ public abstract class Possessed : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D other)
     {
-        ShowNoGlow();
+        if (other.tag == "Player")
+        {
+            ShowNoGlow();
+        }
     }
 
     public void Possess()

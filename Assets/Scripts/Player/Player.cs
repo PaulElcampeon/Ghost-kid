@@ -18,8 +18,7 @@ public class Player : MonoBehaviour
         instance = this;
         transform.position = playerStartingPoint;
         playerAnimator = gameObject.GetComponent<PlayerAnimator>();
-        Unpossess();
-       // GetComponent<Animator>().SetBool("outOfObject", true);
+        StartCoroutine(SpawnPlayerIn());
     }
 
     void Update()
@@ -32,7 +31,6 @@ public class Player : MonoBehaviour
 
                 GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
                 playerAnimator.Possess();
-                //GetComponent<Animator>().SetBool("isPossessed", true);
             }
         }
     }
@@ -62,5 +60,21 @@ public class Player : MonoBehaviour
     public void Unpossess()
     {
         playerAnimator.Unpossess();
+    }
+
+    public void ShowPlayer()
+    {
+        Player.instance.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+    public void ResumeIdle()
+    {
+        playerAnimator.Idle();
+    }
+
+    public IEnumerator SpawnPlayerIn()
+    {
+        yield return new WaitForSeconds(2f);
+        Unpossess();
     }
 }
