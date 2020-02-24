@@ -63,7 +63,7 @@ public abstract class Possessed : MonoBehaviour
             Player.instance.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             Player.instance.GetComponent<SpriteRenderer>().enabled = false;
             Player.instance.gameObject.SetActive(true);
-            Player.instance.GetComponent<Animator>().SetBool("outOfObject", true);
+            Player.instance.Unpossess();
 
             CameraController.instance.target = Player.instance.transform;
 

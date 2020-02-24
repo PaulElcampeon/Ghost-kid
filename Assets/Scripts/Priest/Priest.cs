@@ -54,7 +54,7 @@ public class Priest : MonoBehaviour
             if (!GameManager.instance.isDead)
             {
                 GameManager.instance.canMove = false;
-                other.gameObject.GetComponent<Animator>().SetBool("isDead", true);
+                Player.instance.Die();
             }
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Death : StateMachineBehaviour
 {
-    private float delay;
+    public float delay;
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

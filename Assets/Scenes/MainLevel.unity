@@ -1425,6 +1425,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14c5da71036c23841ad0ef3e28cdcd45, type: 3}
+--- !u!1 &452225476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6101216940041426884, guid: 14c5da71036c23841ad0ef3e28cdcd45,
+    type: 3}
+  m_PrefabInstance: {fileID: 452225475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &452225477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452225476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e517c1097c8c1b34588d49e1552815bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &453712286 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 453712286, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
@@ -8814,16 +8832,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620804694}
     m_Modifications:
-    - target: {fileID: 2592532590994608565, guid: fa670d9b8b48ed64fad9043274ba8b67,
-        type: 3}
-      propertyPath: m_Name
-      value: Refrigerator
-      objectReference: {fileID: 0}
-    - target: {fileID: 2592532590994608565, guid: fa670d9b8b48ed64fad9043274ba8b67,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 2592532590994608567, guid: fa670d9b8b48ed64fad9043274ba8b67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8893,6 +8901,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.120285
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592532590994608565, guid: fa670d9b8b48ed64fad9043274ba8b67,
+        type: 3}
+      propertyPath: m_Name
+      value: Refrigerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592532590994608565, guid: fa670d9b8b48ed64fad9043274ba8b67,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2592532590994608568, guid: fa670d9b8b48ed64fad9043274ba8b67, type: 3}
@@ -9413,16 +9431,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620804694}
     m_Modifications:
-    - target: {fileID: 3963827335264426753, guid: 6c96f280ac5ddb642b8291f4f61cecee,
-        type: 3}
-      propertyPath: m_Name
-      value: Dresser
-      objectReference: {fileID: 0}
-    - target: {fileID: 3963827335264426753, guid: 6c96f280ac5ddb642b8291f4f61cecee,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 3963827335264426755, guid: 6c96f280ac5ddb642b8291f4f61cecee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9492,6 +9500,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.120285
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963827335264426753, guid: 6c96f280ac5ddb642b8291f4f61cecee,
+        type: 3}
+      propertyPath: m_Name
+      value: Dresser
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963827335264426753, guid: 6c96f280ac5ddb642b8291f4f61cecee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3963827335264426780, guid: 6c96f280ac5ddb642b8291f4f61cecee, type: 3}
@@ -9893,16 +9911,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620804694}
     m_Modifications:
-    - target: {fileID: 5640851967585658484, guid: f6939566e6f589942a546b1760a85d04,
-        type: 3}
-      propertyPath: m_Name
-      value: Stove
-      objectReference: {fileID: 0}
-    - target: {fileID: 5640851967585658484, guid: f6939566e6f589942a546b1760a85d04,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 5640851967585658482, guid: f6939566e6f589942a546b1760a85d04,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9972,6 +9980,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9093578
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640851967585658484, guid: f6939566e6f589942a546b1760a85d04,
+        type: 3}
+      propertyPath: m_Name
+      value: Stove
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640851967585658484, guid: f6939566e6f589942a546b1760a85d04,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5640851967585658481, guid: f6939566e6f589942a546b1760a85d04, type: 3}
@@ -10280,16 +10298,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620804694}
     m_Modifications:
-    - target: {fileID: 6521351498340430379, guid: 6906ac0e18f02f34aaf9c19538aa2578,
-        type: 3}
-      propertyPath: m_Name
-      value: NightStand
-      objectReference: {fileID: 0}
-    - target: {fileID: 6521351498340430379, guid: 6906ac0e18f02f34aaf9c19538aa2578,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 6521351498340430381, guid: 6906ac0e18f02f34aaf9c19538aa2578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10359,6 +10367,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9271927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6521351498340430379, guid: 6906ac0e18f02f34aaf9c19538aa2578,
+        type: 3}
+      propertyPath: m_Name
+      value: NightStand
+      objectReference: {fileID: 0}
+    - target: {fileID: 6521351498340430379, guid: 6906ac0e18f02f34aaf9c19538aa2578,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6521351498340430382, guid: 6906ac0e18f02f34aaf9c19538aa2578, type: 3}
@@ -10439,11 +10457,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 620804694}
     m_Modifications:
-    - target: {fileID: 6890188475598306867, guid: f540ff3e0d663404ab72ac4a1ad7ab13,
-        type: 3}
-      propertyPath: m_Name
-      value: Cabinet_Closed
-      objectReference: {fileID: 0}
     - target: {fileID: 6890188475598306869, guid: f540ff3e0d663404ab72ac4a1ad7ab13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10513,6 +10526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1202849
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890188475598306867, guid: f540ff3e0d663404ab72ac4a1ad7ab13,
+        type: 3}
+      propertyPath: m_Name
+      value: Cabinet_Closed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f540ff3e0d663404ab72ac4a1ad7ab13, type: 3}

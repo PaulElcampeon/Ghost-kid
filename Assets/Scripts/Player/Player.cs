@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public GameObject possesableObj;
     public Animator animator;
     public Vector3 playerStartingPoint;
+    private PlayerAnimator playerAnimator;
+    private bool isDead;
 
     public static Player instance;
   
@@ -15,7 +17,9 @@ public class Player : MonoBehaviour
     {
         instance = this;
         transform.position = playerStartingPoint;
-        GetComponent<Animator>().SetBool("outOfObject", true);
+        playerAnimator = gameObject.GetComponent<PlayerAnimator>();
+        Unpossess();
+       // GetComponent<Animator>().SetBool("outOfObject", true);
     }
 
     void Update()
@@ -27,7 +31,8 @@ public class Player : MonoBehaviour
                 GameManager.instance.isPossessing = true;
 
                 GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-                GetComponent<Animator>().SetBool("isPossessed", true);
+                playerAnimator.Possess();
+                //GetComponent<Animator>().SetBool("isPossessed", true);
             }
         }
     }
@@ -43,6 +48,19 @@ public class Player : MonoBehaviour
         canPossess = false;
         possesableObj.GetComponent<Possessed>().Possess();
         gameObject.SetActive(false);
+    }
 
+    public void Die()
+    {
+        if (!isDead)
+        {
+            isDead = true;
+            playerAnimator.Death();
+        }
+    }
+
+    public void Unpossess()
+    {
+        playerAnimator.Unpossess();
     }
 }

@@ -11,7 +11,7 @@ public class LevelIntro : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && panel.active)
+        if(Input.GetKeyDown(KeyCode.Space) && panel.activeInHierarchy)
         {
             panel.SetActive(false);
             GameManager.instance.Resume();
@@ -35,7 +35,7 @@ public class LevelIntro : MonoBehaviour
 
     public void FadeOutPanelAndResumeGame()
     {
-       if (panel.active)
+       if (panel.activeInHierarchy)
        {
            delay -= Time.deltaTime;
 
