@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameManager.instance.canMove && !GameManager.instance.gamePaused && !GameManager.instance.isHiding &&  !GameManager.instance.isPossessing && !GameManager.instance.gameEnded)
+        if (GameManager.instance.canMove && !GameManager.instance.gamePaused && !GameManager.instance.isHiding &&  !GameManager.instance.isPossessing && !GameManager.instance.gameEnded && !GameManager.instance.allMissionsComplete)
         {
             if (Input.GetAxisRaw("Horizontal") == 1 || InputManager.mainHorizontal() == 1)
             {

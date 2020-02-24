@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public bool canMove = true;
     public bool allMoved = true;
     public bool hasMaxFearLevelBeenReached;
+    public bool loadEndScene;
     public GameObject menuObject;
     public GameObject menu;
 
@@ -60,7 +61,7 @@ public class GameManager : MonoBehaviour
         {
             PriestManager.instance.DeactivateAllPriests();
             StartCoroutine(FadeScreenLate());
-            StartCoroutine(LoadMainMenu(15f));
+            StartCoroutine(LoadEndScene(15f));
         }
     }
 
@@ -143,7 +144,7 @@ public class GameManager : MonoBehaviour
 
         if (allMissionsComplete)
         {
-            gameEnded = true;
+            loadEndScene = true;
         }
     }
 
@@ -153,9 +154,21 @@ public class GameManager : MonoBehaviour
         GameOver();
     }
 
+    public IEnumerator LoadEndScene(float timeInSeconds)
+    {
+        yield return new WaitForSeconds(timeInSeconds);
+        SceneManager.LoadScene("End");
+    }
+
     public IEnumerator FadeScreenLate()
     {
         yield return new WaitForSeconds(11f);
         ScreenFade.instance.FadeToBlack();
-    } 
+    }
+
+    public IEnumerator FadeScreenLate(float timeInSeconds)
+    {
+        yield return new WaitForSeconds(timeInSeconds);
+        ScreenFade.instance.FadeToBlack();
+    }
 }
