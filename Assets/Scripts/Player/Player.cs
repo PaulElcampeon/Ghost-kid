@@ -77,4 +77,9 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Unpossess();
     }
+
+    public void InformGameManagerOfMyDeath()
+    {
+        GameManager.instance.isDead = true;
+    }
 }
