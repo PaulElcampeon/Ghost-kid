@@ -7,7 +7,6 @@ public abstract class Possessed : MonoBehaviour
     public bool isPlayerPresent;
     public bool canHide;
     public GameObject glow;
-    public int size;
     public bool hasPlayedSound;
     public AudioSource possessSfx;
     
@@ -19,7 +18,7 @@ public abstract class Possessed : MonoBehaviour
 
         if(isPlayerPresent)
         {
-            PlayItemSoundOnce();
+            //PlayItemSoundOnce();
             ShowFullGlow();
         }
     }

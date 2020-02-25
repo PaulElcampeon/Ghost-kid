@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Item : Possessed
 {
+    public bool isOnFloor;
  
 }

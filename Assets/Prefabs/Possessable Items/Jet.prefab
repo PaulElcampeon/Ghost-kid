@@ -270,6 +270,6 @@ MonoBehaviour:
   isPlayerPresent: 0
   canHide: 0
   glow: {fileID: 6139197020974247817}
-  size: 0
   hasPlayedSound: 0
   possessSfx: {fileID: 0}
+  isOnFloor: 1
