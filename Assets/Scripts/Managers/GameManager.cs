@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public bool loadEndScene;
     public GameObject menuObject;
     public GameObject menu;
+    public GameObject gameOverScreen;
 
     public Floor[] floors;
     public Slider fearLevelBar;
@@ -30,12 +31,18 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
-        ScreenFade.instance.FadeFromBlack();
+        //ScreenFade.instance.FadeFromBlack();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.anyKey && gameOverScreen.activeInHierarchy)
+        {
+            ScreenFade.instance.FadeToBlack();
+            StartCoroutine(LoadMainMenu(3f));
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameOverScreen.activeInHierarchy)
         {
             if (gamePaused)
             {
@@ -49,12 +56,10 @@ public class GameManager : MonoBehaviour
             }
         }
 
-       if(isDead)
+       if(isDead && !gameOverScreen.activeInHierarchy)
        {
-            //We do this so that the code in this block only gets executed once
             isDead = false;
-            StartCoroutine(LoadMainMenu(5f));
-            ScreenFade.instance.FadeToBlack();
+            StartCoroutine(ShowGameOverScreen());
        }
 
        if (allMissionsComplete)
@@ -170,5 +175,13 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(timeInSeconds);
         ScreenFade.instance.FadeToBlack();
+    }
+
+    public IEnumerator ShowGameOverScreen()
+    {
+        ScreenFade.instance.FadeToBlack();
+        yield return new WaitForSeconds(2f);
+        gameOverScreen.SetActive(true);
+        ScreenFade.instance.FadeFromBlack();
     }
 }

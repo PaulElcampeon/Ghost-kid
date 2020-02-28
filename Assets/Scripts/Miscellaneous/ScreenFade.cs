@@ -15,6 +15,7 @@ public class ScreenFade : MonoBehaviour
     void Start()
     {
         instance = this;
+        shouldFadeFromBlack = true;
     }
 
     void Update()

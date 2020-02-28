@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public Vector3 playerStartingPoint;
     private PlayerAnimator playerAnimator;
-    private bool isDead;
+    public bool isDead;
 
     public static Player instance;
   

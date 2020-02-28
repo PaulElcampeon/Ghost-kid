@@ -40,7 +40,6 @@ public class GhostDetector : MonoBehaviour
 
     public bool AreWeCollidingWithAMovingPossessable(Collider2D other)
     {
-        //Debug.Log(other.gameObject.tag);
         if (other.gameObject.CompareTag("Possessable") && !npc.GetComponent<NPC>().isMissionComplete)
         {
             return other.gameObject.GetComponent<Possessed>().isPlayerPresent && other.gameObject.GetComponent<PossessableMovement>().isMoving;
@@ -50,6 +49,6 @@ public class GhostDetector : MonoBehaviour
 
     public bool AreWeCollidingWithGhost(Collider2D other)
     {
-        return other.gameObject.CompareTag("Player") && !npc.GetComponent<NPC>().isMissionComplete;
+        return other.gameObject.CompareTag("Player") && !other.gameObject.GetComponent<Player>().isDead && !npc.GetComponent<NPC>().isMissionComplete;
     }
 }
