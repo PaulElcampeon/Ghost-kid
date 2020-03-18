@@ -10,9 +10,14 @@ public class Credits : MonoBehaviour
     void Start()
     {
         audioSource = player.GetComponent<AudioSource>();
-        StartCoroutine(GameManager.instance.FadeScreenLate(17f));
-        StartCoroutine(GameManager.instance.LoadMainMenu(19f));
-        StartCoroutine(FadeOutMusic(50f));
+    }
+
+    private void Update()
+    {
+        if (Input.anyKeyDown)
+        {
+            LoadMenu();
+        }
     }
 
     public IEnumerator FadeOutMusic(float timeInSeconds)
@@ -25,5 +30,12 @@ public class Credits : MonoBehaviour
             yield return null;
         }
 
+    }
+
+    private void LoadMenu()
+    {
+        StartCoroutine(GameManager.instance.FadeScreenLate(4f));
+        StartCoroutine(GameManager.instance.LoadMainMenu(6f));
+        //StartCoroutine(FadeOutMusic(4f));
     }
 }
