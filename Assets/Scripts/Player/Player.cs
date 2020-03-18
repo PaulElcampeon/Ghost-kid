@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public Vector3 playerStartingPoint;
     private PlayerAnimator playerAnimator;
     public bool isDead;
+    [SerializeField]
+    private AudioSource possessSFX;
 
     public static Player instance;
   
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour
     public void Possess()
     {
         possesableObj.GetComponent<PossessableMovement>().enabled = true;
+        SoundEngine.instance.PlaySFX(possessSFX);
         CameraController.instance.target = possesableObj.GetComponent<Rigidbody2D>().transform;
 
         /*

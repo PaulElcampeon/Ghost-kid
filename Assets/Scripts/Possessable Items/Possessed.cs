@@ -8,7 +8,7 @@ public abstract class Possessed : MonoBehaviour
     public bool canHide;
     public GameObject glow;
     public bool hasPlayedSound;
-    public AudioSource possessSfx;
+    protected AudioSource unPossessSFX;
     
     public virtual void Update()
     {
@@ -25,9 +25,9 @@ public abstract class Possessed : MonoBehaviour
 
     public void PlayItemSoundOnce()
     {
-        if (!hasPlayedSound && possessSfx != null)
+        if (!hasPlayedSound && unPossessSFX != null)
         {
-            possessSfx.Play();
+            unPossessSFX.Play();
             hasPlayedSound = true;
         }
     }
@@ -54,6 +54,8 @@ public abstract class Possessed : MonoBehaviour
     {
         if (isPlayerPresent)
         {
+            SoundEngine.instance.PlaySFX(unPossessSFX);
+
             GameManager.instance.isPossessing = false;
 
             Player.instance.transform.position = transform.position;

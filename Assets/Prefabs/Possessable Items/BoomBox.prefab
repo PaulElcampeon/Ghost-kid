@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2531691919754406857}
   - component: {fileID: 2531691919754406856}
   - component: {fileID: 995026165}
+  - component: {fileID: 757541829}
   m_Layer: 9
   m_Name: BoomBox
   m_TagString: Possessable
@@ -188,11 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98ff18ad7687c24e976149aa1efc486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerPresent: 0
-  canHide: 0
-  glow: {fileID: 2531691920132737229}
-  hasPlayedSound: 0
-  possessSfx: {fileID: 0}
   track: {fileID: 0}
   audioClipArray:
   - {fileID: 8300000, guid: 6ecfb8aaba68c8d4cbfc576713aa0926, type: 3}
@@ -200,6 +196,25 @@ MonoBehaviour:
   - {fileID: 8300000, guid: da8599e755f7b0c42a12b02ec7588169, type: 3}
   isAlreadyPlaying: 0
   animator: {fileID: 4270162824926473157}
+  possessedScript: {fileID: 0}
+--- !u!114 &757541829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2531691919754406867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5add4b030f78d846939bffa19e7e8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerPresent: 0
+  canHide: 0
+  glow: {fileID: 2531691920132737229}
+  hasPlayedSound: 0
+  unpossessSFX: {fileID: 0}
+  isOnFloor: 0
 --- !u!1 &2531691920132737229
 GameObject:
   m_ObjectHideFlags: 0

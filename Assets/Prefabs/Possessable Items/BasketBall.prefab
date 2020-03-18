@@ -191,7 +191,7 @@ MonoBehaviour:
   canHide: 0
   glow: {fileID: 6181819311470359379}
   hasPlayedSound: 0
-  possessSfx: {fileID: 0}
+  unpossessSFX: {fileID: 0}
   isOnFloor: 1
 --- !u!1 &6181819311470359379
 GameObject:
