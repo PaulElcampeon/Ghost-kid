@@ -20,6 +20,7 @@ public class SoundEngine : MonoBehaviour
 
     public void PlaySFX(AudioSource sfx)
     {
+        Debug.Log(sfx.name);
         sfx.volume = sfxVolume;
         sfx.Play();
     }

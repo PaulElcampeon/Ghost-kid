@@ -1266,11 +1266,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 7089827200584246634, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7089827200584246638, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1326,7 +1321,89 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 92288453, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 658573058, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784764359, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025460285, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819426537173789056, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 67539238, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 453712284, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 765755386, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 801360255, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 838911659, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870642385, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071340793, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341611022, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935650517, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133513477706364451, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054804688, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242017039154392543, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167136779002155327, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990010447571666926, guid: 0a55b6d19420b6a4d8f5b556e6676d41,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5133513477706364451, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
 --- !u!1 &465601302
 GameObject:
