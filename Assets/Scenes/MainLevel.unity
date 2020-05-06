@@ -5007,12 +5007,12 @@ PrefabInstance:
     - target: {fileID: 7837151124704508344, guid: ae5085f84be491d40a281481489fb834,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.16
+      value: 25.92
       objectReference: {fileID: 0}
     - target: {fileID: 7837151124704508344, guid: ae5085f84be491d40a281481489fb834,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.89
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 7837151124704508344, guid: ae5085f84be491d40a281481489fb834,
         type: 3}
@@ -9090,6 +9090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fader
       objectReference: {fileID: 0}
+    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9833,6 +9838,16 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 1338191633}
+    - target: {fileID: 5422818713324265704, guid: c17d2fe33e91b464aa79a623b0e458fc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422818711727916377, guid: c17d2fe33e91b464aa79a623b0e458fc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c17d2fe33e91b464aa79a623b0e458fc, type: 3}
 --- !u!1001 &5498109078797316914
@@ -10628,7 +10643,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1961867163, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: sfxVolume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961867163, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
+      propertyPath: bgmVolume
+      value: 0.6
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5133513477706364451, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0a55b6d19420b6a4d8f5b556e6676d41, type: 3}
 --- !u!82 &7089827201921583292 stripped
 AudioSource:
@@ -10868,22 +10892,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
-      propertyPath: menuObject
-      value: 
-      objectReference: {fileID: 519140983}
-    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
-      propertyPath: menu
-      value: 
-      objectReference: {fileID: 1143014922}
-    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
-      propertyPath: gameOverScreen
-      value: 
-      objectReference: {fileID: 478259595}
-    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
-      propertyPath: fearLevelBar
-      value: 
-      objectReference: {fileID: 727341243}
     - target: {fileID: 9107673539213958610, guid: 4924ad9e89b5d814180d09d5923398bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10939,5 +10947,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
+      propertyPath: menuObject
+      value: 
+      objectReference: {fileID: 519140983}
+    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1143014922}
+    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 478259595}
+    - target: {fileID: 123894286, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
+      propertyPath: fearLevelBar
+      value: 
+      objectReference: {fileID: 727341243}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4924ad9e89b5d814180d09d5923398bb, type: 3}
