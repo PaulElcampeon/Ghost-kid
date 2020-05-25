@@ -7,16 +7,20 @@ public class UpdateSoundVolumes : MonoBehaviour
 {
     public Slider sfxSlider;
     public Slider bgmSlider;
-    // Start is called before the first frame update
+
     void Start()
     {
         sfxSlider.value = SoundEngine.instance.sfxVolume;
         bgmSlider.value = SoundEngine.instance.bgmVolume;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateBGMVolume()
     {
-        SoundEngine.instance.UpdateSoundVolume(sfxSlider.value, bgmSlider.value);
+        SoundEngine.instance.UpdateBGMVolume(bgmSlider.value);
+    }
+
+    public void UpdateSFXVolume()
+    {
+        SoundEngine.instance.UpdateSFXVolume(sfxSlider.value);
     }
 }

@@ -24,7 +24,7 @@ public class BoomBox : MonoBehaviour
             track.clip = audioClipArray[Random.Range (0, audioClipArray.Length)];
             isAlreadyPlaying = true;
             animator.SetBool("isPlaying", true);
-            track.volume = 0.99f;
+            track.volume = SoundEngine.instance.bgmVolume;
             track.Play();
         }
 

@@ -8531,6 +8531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 519140983, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1602437338, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8705,8 +8709,72 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1950986021, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916436842, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916436842, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916436842, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916436842, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1279976900834242302}
+    - target: {fileID: 1916436842, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateBGMVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916436842, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969276802, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969276802, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969276802, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969276802, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1279976900834242302}
+    - target: {fileID: 1969276802, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateSFXVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969276802, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b43f85701ced844bbc97e1c80eadc61, type: 3}
+--- !u!114 &1279976900834242302 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1950986025, guid: 9b43f85701ced844bbc97e1c80eadc61,
+    type: 3}
+  m_PrefabInstance: {fileID: 1279976900834242301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fe19eb28ce7184ba5924544b7003e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1844803047613568507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3268305669905178535, guid: 501391f7519371f41928c4757fcb48c8,
@@ -9129,6 +9197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fader
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992948393885349550, guid: b44958badca0717469f43fb6f3bd0a1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2992948393885349546, guid: b44958badca0717469f43fb6f3bd0a1e,
         type: 3}

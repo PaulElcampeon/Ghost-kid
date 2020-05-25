@@ -6,10 +6,14 @@ public class SoundEngine : MonoBehaviour
 {
     public AudioSource[] bgm;
     public AudioSource[] sfx;
-    public float timeForMusicToFadeOut = 1f;
+    public float timeForMusicToFadeOut = 0.5f;
     public bool hasPriestSpawned;
     public float sfxVolume = 0.7f;
     public float bgmVolume = 0.5f;
+
+    private Coroutine fadeInRoutine;
+    private Coroutine fadeOutRoutine;
+
 
     public static SoundEngine instance;
 
@@ -64,7 +68,7 @@ public class SoundEngine : MonoBehaviour
     public void PlayPriestMusic(AudioSource[] music, float fadeIn, float maxVolume)
     {
         StopAllMusic();
-        StartCoroutine(FadeIn(music[0], fadeIn, maxVolume));
+        fadeInRoutine = StartCoroutine(FadeIn(music[0], fadeIn, maxVolume));
         hasPriestSpawned = true;
     }
 
@@ -122,9 +126,22 @@ public class SoundEngine : MonoBehaviour
 
     //This means that when we update the sound volume it will result in the current music volume not being updated until the player goes to another floor and a new peice of music begins to play with the new volume setting
     //The sound effects should take immediate effect as we set the volume when the effect is about to be played
-    public void UpdateSoundVolume( float sfxVolume, float bgmVolume)
+    public void UpdateBGMVolume(float newBGMVolume)
     {
-        SoundEngine.instance.sfxVolume = sfxVolume;
-        SoundEngine.instance.bgmVolume = bgmVolume;
+        Debug.Log("Updating BGM Volume to: " + newBGMVolume);
+
+        bgmVolume = newBGMVolume;
+
+        foreach(AudioSource source in bgm)
+        {
+            if (source.isPlaying) source.volume = bgmVolume;
+        }
+    }
+
+    public void UpdateSFXVolume(float newsSFXVolume)
+    {
+        Debug.Log("Updating SFX Volume to: " + newsSFXVolume);
+
+        sfxVolume = newsSFXVolume;
     }
 }
